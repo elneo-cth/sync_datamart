@@ -1,0 +1,33 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<expression:EMFExpression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore" id="null=>OutPutStreamOrderLine=>margin" expression="(row2.pv != null &amp;&amp; row2.pr != null) ? row2.pv - row2.pr : 0">
+  <variables name="row2.id" value="0" talendType="id_Integer"/>
+  <variables name="row2.product_id" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row2.quantity" value="0" talendType="id_Double"/>
+  <variables name="row2.order_id" value="0" talendType="id_Integer"/>
+  <variables name="row2.price_unit" value="0" talendType="id_Double"/>
+  <variables name="row2.discount" value="null" talendType="id_Double" nullable="true"/>
+  <variables name="row2.purchase_price" value="null" talendType="id_Double" nullable="true"/>
+  <variables name="row2.pv" value="null" talendType="id_Double" nullable="true"/>
+  <variables name="row2.pr" value="null" talendType="id_Double" nullable="true"/>
+  <variables name="row2.k" value="null" talendType="id_Double" nullable="true"/>
+  <variables name="row2.representant" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.section_id" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="OutPutStreamFilledProducts.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="OutPutStreamFilledProducts.id" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="OutPutStreamFilledProducts.supplier_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="OutPutStreamFilledProducts.categ_subfamily_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="OutPutStreamFilledProducts.categ_family_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="OutPutStreamFilledProducts.categ_dpt_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="OutPutCompletedOrders.id_scd" value="0" talendType="id_Integer"/>
+  <variables name="OutPutCompletedOrders.id" value="0" talendType="id_Integer"/>
+  <variables name="OutPutCompletedOrders.customer_id" value="0" talendType="id_Integer"/>
+  <variables name="OutPutCompletedOrders.shop_id_scd" value="0" talendType="id_Integer"/>
+  <variables name="OutPutCompletedOrders.create_uid_scd" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="OutPutCompletedOrders.date_confirm_scd" value="null" talendType="id_Date" nullable="true"/>
+  <variables name="OutPutCompletedOrders.sales_counter_id" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row13.id_scd" value="0" talendType="id_Integer"/>
+  <variables name="row13.id" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row13.login" value="null" talendType="id_String"/>
+  <variables name="OutPutStreamSections.id" value="0" talendType="id_Integer"/>
+  <variables name="OutPutStreamSections.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+</expression:EMFExpression>

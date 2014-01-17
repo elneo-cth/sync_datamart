@@ -1,0 +1,1622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
+  <context confirmationNeeded="false" name="Default"/>
+  <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1048M"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="true"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="160"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
+    <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
+    <elementParameter field="TEXT" name="HADOOP_APP_PATH" value=""/>
+    <elementParameter field="TEXT" name="JOBID_FOR_OOZIE" value=""/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value=""/>
+    <elementParameter field="TABLE" name="HADOOP_ADVANCED_PROPERTIES"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value=""/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="true"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;/home/nfrancisco/Talend/Logiciels/TOS/4.0.0RC1/Install/TOS-All-r38438-V4.0.0RC1/workspace/.metadata&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tPostgresqlOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ojdbc14-10g.jar"/>
+    <elementParameter field="TEXT" name="URL" value=""/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value=""/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;127.0.0.1&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;datamart&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;postgres&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;Newtec68&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;log_stats&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;log&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;log_flow_meter&quot;"/>
+    <routinesParameter id="_ExXAYO29EeGd6_PyQ9mK_w" name="DataOperation"/>
+    <routinesParameter id="_ExEFcO29EeGd6_PyQ9mK_w" name="Mathematical"/>
+    <routinesParameter id="_ExIW4O29EeGd6_PyQ9mK_w" name="Numeric"/>
+    <routinesParameter id="_ExVLMO29EeGd6_PyQ9mK_w" name="Relational"/>
+    <routinesParameter id="_ExKMEO29EeGd6_PyQ9mK_w" name="StringHandling"/>
+    <routinesParameter id="_EvsMcO29EeGd6_PyQ9mK_w" name="TalendDataGenerator"/>
+    <routinesParameter id="_ExMBQO29EeGd6_PyQ9mK_w" name="TalendDate"/>
+    <routinesParameter id="_ExT9EO29EeGd6_PyQ9mK_w" name="TalendString"/>
+    <routinesParameter id="_8qwkYFjNEdyj6eiqDt60Og" name="DemoRoutines"/>
+    <routinesParameter id="_HKXfQGIZEd26GZmhFZLTPA" name="GetRandomPhoneNum"/>
+  </parameters>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="163">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_13"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_mRTakO3AEeGH6b2rAB-u8A"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;127.0.0.1&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;datamart&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;postgres&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;Newtec68&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stock_by_site&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;datamart\&quot;.\&quot;public\&quot;.\&quot;stock_by_site\&quot;.\&quot;ref\&quot;, &#xA;  \&quot;datamart\&quot;.\&quot;public\&quot;.\&quot;stock_by_site\&quot;.\&quot;warehouse_id\&quot;&#xA;FROM \&quot;datamart\&quot;.\&quot;public\&quot;.\&quot;stock_by_site\&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ref"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="warehouse_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="stock_by_site" name="tPostgresqlInput_13">
+      <column comment="" key="true" length="64" name="ref" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="true" length="10" name="warehouse_id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="544" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_3"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_SrO30IDJEeKyQemiUo7xzQ-tMap_3-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="OutPutStreamIsActived">
+      <column comment="" key="true" length="100" name="ref" nullable="true" pattern="" sourceType="" type="id_String" originalLength="100" usefulColumn="true"/>
+      <column key="true" length="10" name="warehouse_id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" name="scd_remove" nullable="true" pattern="" sourceType="" type="id_Boolean" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="OutPutStreamIsActived">
+        <mapperTableEntries name="ref" expression="row5.ref " type="id_String" nullable="true"/>
+        <mapperTableEntries name="warehouse_id" expression="row5.warehouse_id " type="id_Integer"/>
+        <mapperTableEntries name="scd_remove" expression="(OutPutStreamKeyActive.scd_remove == null) ? true : OutPutStreamKeyActive.scd_remove " type="id_Boolean" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row5" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="ref" type="id_String"/>
+        <mapperTableEntries name="warehouse_id" type="id_Integer"/>
+      </inputTables>
+      <inputTables sizeState="INTERMEDIATE" name="OutPutStreamKeyActive" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="scd_remove" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="warehouse_id" expression="row5.warehouse_id " type="id_Integer" nullable="true" operator="="/>
+        <mapperTableEntries name="ref" expression="row5.ref " type="id_String" operator="="/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="544" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_SrO30IDJEeKyQemiUo7xzQ-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="OutPutStreamKeyActive">
+      <column comment="" key="false" name="scd_remove" nullable="true" pattern="" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="warehouse_id" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="64" name="ref" nullable="false" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="OutPutStreamKeyActive">
+        <mapperTableEntries name="scd_remove" expression="false" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="warehouse_id" expression="row1.warehouse_id " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="ref" expression="row1.ref " type="id_String"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="id" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="ref" type="id_String" nullable="true"/>
+        <mapperTableEntries name="warehouse_id" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="site" type="id_String" nullable="true"/>
+        <mapperTableEntries name="storage_policy" type="id_String" nullable="true"/>
+        <mapperTableEntries name="aisle" type="id_String" nullable="true"/>
+        <mapperTableEntries name="max_qty" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="min_qty" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="write_date" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="physical_qty" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="virtual_qty" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="out_qty" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="so_qty" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="po_qty" type="id_Double" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_1"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS">
+      <elementValue elementRef="INPUT_COLUMN" value="scd_remove"/>
+      <elementValue elementRef="FUNCTION" value=""/>
+      <elementValue elementRef="OPERATOR" value="=="/>
+      <elementValue elementRef="RVALUE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tFilterRow_1">
+      <column comment="" key="true" length="100" name="ref" nullable="true" pattern="" sourceType="" type="id_String" originalLength="100" usefulColumn="true"/>
+      <column key="true" length="10" name="warehouse_id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" name="scd_remove" nullable="true" pattern="" sourceType="" type="id_Boolean" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FILTER" name="FILTER">
+      <column comment="" key="true" length="100" name="ref" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="true" length="10" name="warehouse_id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" name="scd_remove" nullable="true" pattern="" sourceType="" type="id_Boolean" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="true" length="100" name="ref" nullable="true" pattern="" sourceType="" type="id_String" originalLength="100" usefulColumn="true"/>
+      <column key="true" length="10" name="warehouse_id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" name="scd_remove" nullable="true" pattern="" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="960" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_4"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_SrO30IDJEeKyQemiUo7xzQ-tMap_4-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="OUtPutActive" name="OUtPutActive">
+      <column comment="" key="true" length="100" name="ref" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="true" length="10" name="warehouse_id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="OUtPutActive">
+        <mapperTableEntries name="ref" expression="row6.ref" type="id_String" nullable="true"/>
+        <mapperTableEntries name="warehouse_id" expression="row6.warehouse_id" type="id_Integer"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row6" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="ref" type="id_String" nullable="true"/>
+        <mapperTableEntries name="warehouse_id" type="id_Integer"/>
+        <mapperTableEntries name="scd_remove" type="id_Boolean" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_2"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_mRTakO3AEeGH6b2rAB-u8A"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;127.0.0.1&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;datamart&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;postgres&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;Newtec68&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stock_by_site&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="DELETE"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="SPATIAL_INDEX" value="false"/>
+    <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id"/>
+    <elementParameter field="CHECK" name="SAVE_POINT" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ref"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="warehouse_id"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="OUtPutActive" name="tPostgresqlOutput_2">
+      <column comment="" key="true" length="100" name="ref" nullable="true" pattern="" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="true" length="10" name="warehouse_id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" label="OUtPutActive" name="REJECT">
+      <column comment="" key="true" length="100" name="ref" nullable="true" pattern="" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="true" length="10" name="warehouse_id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_2"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_Bp8msO3BEeGH6b2rAB-u8A"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.0.0.117&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;tech&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;openerp&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;Newtec68&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="_Bp8msO3BEeGH6b2rAB-u8A - GetAllStockSite"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="REPOSITORY"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;WITH awans_qty AS (&#xD;&#xA;SELECT 1 as warehouse_id, q1.product_id, round(sum(q1.physical_qty), 2) AS physical_qty,&#xA;  round(sum(q1.virtual_qty ), 2) AS virtual_qty, round(sum(q1.out_qty ), 2) AS out_qty,&#xA;  round(sum(q1.so_qty), 2) AS so_qty,round(sum(q1.po_qty),&#xD;&#xA;  2) AS po_qty FROM &#xD;&#xA;&#x9;(SELECT product_product.id as product_id, sum(stock_move.product_qty) AS physical_qty,&#xD;&#xA;  0 AS virtual_qty, 0 AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_dest_id = 15 AND stock_move.state::text = &#xD;&#xA; 'done'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION &#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id, - sum(stock_move.product_qty) AS physical_qty,&#xD;&#xA;  0 AS virtual_qty, 0 AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_id = 15 AND stock_move.state::text = &#xD;&#xA; 'done'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id, 0 AS physical_qty,&#xD;&#xA;  sum(stock_move.product_qty) AS virtual_qty, 0 AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_dest_id = 15 AND stock_move.state::text != &#xD;&#xA; 'draft'::text &#xD;&#xA;&#x9;AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION &#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id,0 AS physical_qty,&#xD;&#xA;  - sum(stock_move.product_qty) AS virtual_qty, 0 AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_id = 15 AND stock_move.state::text != &#xD;&#xA; 'draft'::text &#xD;&#xA;&#x9;AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id, 0 AS physical_qty, 0 AS virtual_qty,&#xD;&#xA;  sum(stock_move.product_qty) AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_dest_id = 11 AND stock_move.state::text = &#xD;&#xA; 'done'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION &#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id, 0 AS physical_qty, 0 AS virtual_qty,&#xD;&#xA;  - sum(stock_move.product_qty) AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_id = 11 AND stock_move.state::text = &#xD;&#xA; 'done'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id,0 AS physical_qty, 0 AS virtual_qty, 0 AS out_qty,&#xD;&#xA;  sum(stock_move.product_qty) AS so_qty, 0 AS po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_id = 15 AND &#xD;&#xA;&#x9;stock_move.state::text != 'done'::text AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;SELECT product_product.id as product_id,0 AS physical_qty, 0 AS virtual_qty, 0 AS out_qty,&#xD;&#xA;  0 AS so_qty, sum(stock_move.product_qty) AS po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_dest_id = 15 AND &#xD;&#xA;&#x9;stock_move.state::text != 'done'::text AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#x9;&#xD;&#xA;) as q1&#xD;&#xA;GROUP BY q1.product_id),&#xD;&#xA;&#xD;&#xA;wetteren_qty AS (&#xD;&#xA;SELECT 2 as warehouse_id, q1.product_id, round(sum(q1.physical_qty), 2) AS physical_qty,&#xA;  round(sum(q1.virtual_qty ), 2) AS virtual_qty, round(sum(q1.out_qty ), 2) AS out_qty ,&#xA;  round(sum(q1.so_qty), 2) AS so_qty,round(sum(q1.po_qty),&#xD;&#xA;  2) AS po_qty FROM &#xD;&#xA;&#x9;(SELECT product_product.id as product_id, sum(stock_move.product_qty) AS physical_qty,&#xD;&#xA;  0 AS virtual_qty, 0 AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_dest_id = 16 AND stock_move.state::text = &#xD;&#xA; 'done'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION &#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id, - sum(stock_move.product_qty) AS physical_qty,&#xD;&#xA;  0 AS virtual_qty, 0 AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_id = 16 AND stock_move.state::text = &#xD;&#xA; 'done'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id, 0 AS physical_qty,&#xD;&#xA;  sum(stock_move.product_qty) AS virtual_qty, 0 AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_dest_id = 16 AND stock_move.state::text != &#xD;&#xA; 'draft'::text &#xD;&#xA;&#x9;AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION &#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id,0 AS physical_qty,&#xD;&#xA;  - sum(stock_move.product_qty) AS virtual_qty, 0 AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_id = 16 AND stock_move.state::text != &#xD;&#xA; 'draft'::text &#xD;&#xA;&#x9;AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id, 0 AS physical_qty, 0 AS virtual_qty,&#xD;&#xA;  sum(stock_move.product_qty)  AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_dest_id = 17 AND stock_move.state::text != &#xD;&#xA; 'draft'::text &#xD;&#xA;&#x9;AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION &#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id,0 AS physical_qty, 0 AS virtual_qty,&#xD;&#xA;  - sum(stock_move.product_qty) AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_id = 17 AND stock_move.state::text != &#xD;&#xA; 'draft'::text &#xD;&#xA;&#x9;AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id,0 AS physical_qty, 0 AS virtual_qty, 0 AS out_qty,&#xD;&#xA;  sum(stock_move.product_qty) AS so_qty, 0 AS po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_id = 16 AND &#xD;&#xA;&#x9;stock_move.state::text != 'done'::text AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;SELECT product_product.id as product_id,0 AS physical_qty, 0 AS virtual_qty, 0 AS out_qty,&#xD;&#xA;  0 AS so_qty, sum(stock_move.product_qty) AS po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_dest_id = 16 AND &#xD;&#xA;&#x9;stock_move.state::text != 'done'::text AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;) as q1&#xD;&#xA;GROUP BY q1.product_id&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;select product.id as id, ref, product.warehouse_id, &#xD;&#xA;stock_warehouse.name as site, storage_policy, aisle,&#xD;&#xA;stock_warehouse_orderpoint.product_max_qty as max_qty,&#xD;&#xA;stock_warehouse_orderpoint.product_min_qty as min_qty,&#xD;&#xA;stock_warehouse_orderpoint.write_date,&#xD;&#xA;CASE WHEN qty.physical_qty is not null THEN qty.physical_qty ELSE  0 END as physical_qty,&#xD;&#xA;CASE WHEN qty.virtual_qty is not null THEN qty.virtual_qty ELSE  0 END as virtual_qty,&#xD;&#xA;CASE WHEN qty.out_qty is not null THEN qty.out_qty ELSE  0 END as out_qty,&#xD;&#xA;CASE WHEN qty.so_qty is not null THEN qty.so_qty ELSE  0 END as so_qty,&#xD;&#xA;CASE WHEN qty.po_qty is not null THEN qty.po_qty ELSE  0 END as po_qty,&#xD;&#xA;stock_warehouse_orderpoint.qty_multiple,&#xD;&#xA;product_template.type as type_product&#xD;&#xA;from (select product_product.id as id, product_product.default_code as ref,&#xA; product_product.product_tmpl_id as tmpl_id,&#xD;&#xA;&#x9;product_product.storage_policy_awans as storage_policy, 1 as warehouse_id,&#xD;&#xA;&#x9;product_product.aisle_awans AS aisle &#xD;&#xA;&#x9;FROM product_product &#xD;&#xA;&#x9;WHERE (product_product.active=true or product_product.active is null) AND &#xD;&#xA; product_product.default_code is not null) as product&#xD;&#xA;LEFT JOIN product_template on tmpl_id=product_template.id&#xD;&#xA;LEFT JOIN stock_warehouse ON stock_warehouse.id=product.warehouse_id&#xD;&#xA;LEFT JOIN stock_warehouse_orderpoint on stock_warehouse_orderpoint.product_id=product.id AND &#xA; stock_warehouse_orderpoint.warehouse_id=product.warehouse_id&#xD;&#xA;LEFT JOIN awans_qty qty ON qty.warehouse_id = product.warehouse_id AND qty.product_id = product.id&#xD;&#xA;&#xD;&#xA;UNION&#xD;&#xA;&#xD;&#xA;select product.id as id, ref, product.warehouse_id, &#xD;&#xA;stock_warehouse.name as site, storage_policy, aisle,&#xD;&#xA;stock_warehouse_orderpoint.product_max_qty as max_qty,&#xD;&#xA;stock_warehouse_orderpoint.product_min_qty as min_qty,&#xD;&#xA;stock_warehouse_orderpoint.write_date,&#xD;&#xA;CASE WHEN qty.physical_qty is not null THEN qty.physical_qty ELSE  0 END as physical_qty,&#xD;&#xA;CASE WHEN qty.virtual_qty is not null THEN qty.virtual_qty ELSE  0 END as virtual_qty,&#xD;&#xA;CASE WHEN qty.out_qty is not null THEN qty.out_qty ELSE  0 END as out_qty,&#xD;&#xA;CASE WHEN qty.so_qty is not null THEN qty.so_qty ELSE  0 END as so_qty,&#xD;&#xA;CASE WHEN qty.po_qty is not null THEN qty.po_qty ELSE  0 END as po_qty,&#xD;&#xA;stock_warehouse_orderpoint.qty_multiple,&#xD;&#xA;product_template.type as type_product&#xD;&#xA;from (select product_product.id as id, product_product.default_code as ref,&#xA; product_product.product_tmpl_id as tmpl_id, &#xD;&#xA;&#x9;product_product.storage_policy_wetteren as storage_policy, 2 as warehouse_id,&#xD;&#xA;&#x9;product_product.aisle_wetteren AS aisle &#xD;&#xA;&#x9;FROM product_product &#xD;&#xA;&#x9;WHERE (product_product.active=true or product_product.active is null) AND &#xD;&#xA; product_product.default_code is not null) as product&#xD;&#xA;LEFT JOIN product_template on tmpl_id=product_template.id&#xD;&#xA;LEFT JOIN stock_warehouse ON stock_warehouse.id=product.warehouse_id&#xD;&#xA;LEFT JOIN stock_warehouse_orderpoint on stock_warehouse_orderpoint.product_id=product.id AND &#xA; stock_warehouse_orderpoint.warehouse_id=product.warehouse_id&#xD;&#xA;LEFT JOIN wetteren_qty qty ON qty.warehouse_id = product.warehouse_id AND qty.product_id = &#xA; product.id&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ref"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="warehouse_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="site"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="storage_policy"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aisle"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="max_qty"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="min_qty"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="write_date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="physical_qty"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="virtual_qty"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="out_qty"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="so_qty"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="po_qty"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="GetAllStockSite"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tPostgresqlInput_2">
+      <column comment="" defaultValue="" key="false" length="10" name="id" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="64" name="ref" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="warehouse_id" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="128" name="site" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="storage_policy" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="aisle" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="17" name="max_qty" nullable="true" pattern="" precision="17" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="17" name="min_qty" nullable="true" pattern="" precision="17" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="29" name="write_date" nullable="true" pattern="" precision="6" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="physical_qty" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="virtual_qty" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="out_qty" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="so_qty" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="po_qty" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_9"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_Bp8msO3BEeGH6b2rAB-u8A"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.0.0.117&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;tech&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;openerp&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;Newtec68&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="_Bp8msO3BEeGH6b2rAB-u8A - GetAllStockSite"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="REPOSITORY"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;WITH awans_qty AS (&#xD;&#xA;SELECT 1 as warehouse_id, q1.product_id, round(sum(q1.physical_qty), 2) AS physical_qty,&#xA;  round(sum(q1.virtual_qty ), 2) AS virtual_qty, round(sum(q1.out_qty ), 2) AS out_qty,&#xA;  round(sum(q1.so_qty), 2) AS so_qty,round(sum(q1.po_qty),&#xD;&#xA;  2) AS po_qty FROM &#xD;&#xA;&#x9;(SELECT product_product.id as product_id, sum(stock_move.product_qty) AS physical_qty,&#xD;&#xA;  0 AS virtual_qty, 0 AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_dest_id = 15 AND stock_move.state::text = &#xD;&#xA; 'done'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION &#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id, - sum(stock_move.product_qty) AS physical_qty,&#xD;&#xA;  0 AS virtual_qty, 0 AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_id = 15 AND stock_move.state::text = &#xD;&#xA; 'done'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id, 0 AS physical_qty,&#xD;&#xA;  sum(stock_move.product_qty) AS virtual_qty, 0 AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_dest_id = 15 AND stock_move.state::text != &#xD;&#xA; 'draft'::text &#xD;&#xA;&#x9;AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION &#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id,0 AS physical_qty,&#xD;&#xA;  - sum(stock_move.product_qty) AS virtual_qty, 0 AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_id = 15 AND stock_move.state::text != &#xD;&#xA; 'draft'::text &#xD;&#xA;&#x9;AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id, 0 AS physical_qty, 0 AS virtual_qty,&#xD;&#xA;  sum(stock_move.product_qty) AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_dest_id = 11 AND stock_move.state::text = &#xD;&#xA; 'done'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION &#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id, 0 AS physical_qty, 0 AS virtual_qty,&#xD;&#xA;  - sum(stock_move.product_qty) AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_id = 11 AND stock_move.state::text = &#xD;&#xA; 'done'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id,0 AS physical_qty, 0 AS virtual_qty, 0 AS out_qty,&#xD;&#xA;  sum(stock_move.product_qty) AS so_qty, 0 AS po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_id = 15 AND &#xD;&#xA;&#x9;stock_move.state::text != 'done'::text AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;SELECT product_product.id as product_id,0 AS physical_qty, 0 AS virtual_qty, 0 AS out_qty,&#xD;&#xA;  0 AS so_qty, sum(stock_move.product_qty) AS po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_dest_id = 15 AND &#xD;&#xA;&#x9;stock_move.state::text != 'done'::text AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#x9;&#xD;&#xA;) as q1&#xD;&#xA;GROUP BY q1.product_id),&#xD;&#xA;&#xD;&#xA;wetteren_qty AS (&#xD;&#xA;SELECT 2 as warehouse_id, q1.product_id, round(sum(q1.physical_qty), 2) AS physical_qty,&#xA;  round(sum(q1.virtual_qty ), 2) AS virtual_qty, round(sum(q1.out_qty ), 2) AS out_qty ,&#xA;  round(sum(q1.so_qty), 2) AS so_qty,round(sum(q1.po_qty),&#xD;&#xA;  2) AS po_qty FROM &#xD;&#xA;&#x9;(SELECT product_product.id as product_id, sum(stock_move.product_qty) AS physical_qty,&#xD;&#xA;  0 AS virtual_qty, 0 AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_dest_id = 16 AND stock_move.state::text = &#xD;&#xA; 'done'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION &#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id, - sum(stock_move.product_qty) AS physical_qty,&#xD;&#xA;  0 AS virtual_qty, 0 AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_id = 16 AND stock_move.state::text = &#xD;&#xA; 'done'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id, 0 AS physical_qty,&#xD;&#xA;  sum(stock_move.product_qty) AS virtual_qty, 0 AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_dest_id = 16 AND stock_move.state::text != &#xD;&#xA; 'draft'::text &#xD;&#xA;&#x9;AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION &#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id,0 AS physical_qty,&#xD;&#xA;  - sum(stock_move.product_qty) AS virtual_qty, 0 AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_id = 16 AND stock_move.state::text != &#xD;&#xA; 'draft'::text &#xD;&#xA;&#x9;AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id, 0 AS physical_qty, 0 AS virtual_qty,&#xD;&#xA;  sum(stock_move.product_qty)  AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_dest_id = 17 AND stock_move.state::text != &#xD;&#xA; 'draft'::text &#xD;&#xA;&#x9;AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION &#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id,0 AS physical_qty, 0 AS virtual_qty,&#xD;&#xA;  - sum(stock_move.product_qty) AS out_qty,0 as so_qty, 0 as po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_id = 17 AND stock_move.state::text != &#xD;&#xA; 'draft'::text &#xD;&#xA;&#x9;AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;SELECT product_product.id as product_id,0 AS physical_qty, 0 AS virtual_qty, 0 AS out_qty,&#xD;&#xA;  sum(stock_move.product_qty) AS so_qty, 0 AS po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_id = 16 AND &#xD;&#xA;&#x9;stock_move.state::text != 'done'::text AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;SELECT product_product.id as product_id,0 AS physical_qty, 0 AS virtual_qty, 0 AS out_qty,&#xD;&#xA;  0 AS so_qty, sum(stock_move.product_qty) AS po_qty&#xD;&#xA;&#x9;FROM product_product&#xD;&#xA;&#x9;LEFT JOIN stock_move ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;WHERE product_product.active AND stock_move.location_dest_id = 16 AND &#xD;&#xA;&#x9;stock_move.state::text != 'done'::text AND stock_move.state::text != 'cancel'::text&#xD;&#xA;&#x9;GROUP BY product_product.id&#xD;&#xA;) as q1&#xD;&#xA;GROUP BY q1.product_id&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;select product.id as id, ref, product.warehouse_id, &#xD;&#xA;stock_warehouse.name as site, storage_policy, aisle,&#xD;&#xA;stock_warehouse_orderpoint.product_max_qty as max_qty,&#xD;&#xA;stock_warehouse_orderpoint.product_min_qty as min_qty,&#xD;&#xA;stock_warehouse_orderpoint.write_date,&#xD;&#xA;CASE WHEN qty.physical_qty is not null THEN qty.physical_qty ELSE  0 END as physical_qty,&#xD;&#xA;CASE WHEN qty.virtual_qty is not null THEN qty.virtual_qty ELSE  0 END as virtual_qty,&#xD;&#xA;CASE WHEN qty.out_qty is not null THEN qty.out_qty ELSE  0 END as out_qty,&#xD;&#xA;CASE WHEN qty.so_qty is not null THEN qty.so_qty ELSE  0 END as so_qty,&#xD;&#xA;CASE WHEN qty.po_qty is not null THEN qty.po_qty ELSE  0 END as po_qty,&#xD;&#xA;stock_warehouse_orderpoint.qty_multiple,&#xD;&#xA;product_template.type as type_product&#xD;&#xA;from (select product_product.id as id, product_product.default_code as ref,&#xA; product_product.product_tmpl_id as tmpl_id,&#xD;&#xA;&#x9;product_product.storage_policy_awans as storage_policy, 1 as warehouse_id,&#xD;&#xA;&#x9;product_product.aisle_awans AS aisle &#xD;&#xA;&#x9;FROM product_product &#xD;&#xA;&#x9;WHERE (product_product.active=true or product_product.active is null) AND &#xD;&#xA; product_product.default_code is not null) as product&#xD;&#xA;LEFT JOIN product_template on tmpl_id=product_template.id&#xD;&#xA;LEFT JOIN stock_warehouse ON stock_warehouse.id=product.warehouse_id&#xD;&#xA;LEFT JOIN stock_warehouse_orderpoint on stock_warehouse_orderpoint.product_id=product.id AND &#xA; stock_warehouse_orderpoint.warehouse_id=product.warehouse_id&#xD;&#xA;LEFT JOIN awans_qty qty ON qty.warehouse_id = product.warehouse_id AND qty.product_id = product.id&#xD;&#xA;&#xD;&#xA;UNION&#xD;&#xA;&#xD;&#xA;select product.id as id, ref, product.warehouse_id, &#xD;&#xA;stock_warehouse.name as site, storage_policy, aisle,&#xD;&#xA;stock_warehouse_orderpoint.product_max_qty as max_qty,&#xD;&#xA;stock_warehouse_orderpoint.product_min_qty as min_qty,&#xD;&#xA;stock_warehouse_orderpoint.write_date,&#xD;&#xA;CASE WHEN qty.physical_qty is not null THEN qty.physical_qty ELSE  0 END as physical_qty,&#xD;&#xA;CASE WHEN qty.virtual_qty is not null THEN qty.virtual_qty ELSE  0 END as virtual_qty,&#xD;&#xA;CASE WHEN qty.out_qty is not null THEN qty.out_qty ELSE  0 END as out_qty,&#xD;&#xA;CASE WHEN qty.so_qty is not null THEN qty.so_qty ELSE  0 END as so_qty,&#xD;&#xA;CASE WHEN qty.po_qty is not null THEN qty.po_qty ELSE  0 END as po_qty,&#xD;&#xA;stock_warehouse_orderpoint.qty_multiple,&#xD;&#xA;product_template.type as type_product&#xD;&#xA;from (select product_product.id as id, product_product.default_code as ref,&#xA; product_product.product_tmpl_id as tmpl_id, &#xD;&#xA;&#x9;product_product.storage_policy_wetteren as storage_policy, 2 as warehouse_id,&#xD;&#xA;&#x9;product_product.aisle_wetteren AS aisle &#xD;&#xA;&#x9;FROM product_product &#xD;&#xA;&#x9;WHERE (product_product.active=true or product_product.active is null) AND &#xD;&#xA; product_product.default_code is not null) as product&#xD;&#xA;LEFT JOIN product_template on tmpl_id=product_template.id&#xD;&#xA;LEFT JOIN stock_warehouse ON stock_warehouse.id=product.warehouse_id&#xD;&#xA;LEFT JOIN stock_warehouse_orderpoint on stock_warehouse_orderpoint.product_id=product.id AND &#xA; stock_warehouse_orderpoint.warehouse_id=product.warehouse_id&#xD;&#xA;LEFT JOIN wetteren_qty qty ON qty.warehouse_id = product.warehouse_id AND qty.product_id = &#xA; product.id&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ref"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="warehouse_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="site"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="storage_policy"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aisle"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="max_qty"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="min_qty"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="write_date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="physical_qty"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="virtual_qty"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="out_qty"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="so_qty"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="po_qty"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="qty_multiple"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="type_product"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="GetAllStockSite"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tPostgresqlInput_9">
+      <column comment="" defaultValue="" key="false" length="10" name="id" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="64" name="ref" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="warehouse_id" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="128" name="site" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="storage_policy" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="aisle" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="max_qty" nullable="true" pattern="" precision="2" sourceType="" type="id_Double" originalLength="10" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="min_qty" nullable="true" pattern="" precision="2" sourceType="" type="id_Double" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="29" name="write_date" nullable="true" pattern="" precision="6" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="physical_qty" nullable="true" pattern="" precision="2" sourceType="" type="id_Double" originalLength="10" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="virtual_qty" nullable="true" pattern="" precision="2" sourceType="" type="id_Double" originalLength="10" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="out_qty" nullable="true" pattern="" precision="2" sourceType="" type="id_Double" originalLength="10" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="so_qty" nullable="true" pattern="" precision="2" sourceType="" type="id_Double" originalLength="10" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="po_qty" nullable="true" pattern="" precision="2" sourceType="" type="id_Double" originalLength="10" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="qty_multiple" nullable="true" pattern="" precision="2" sourceType="" type="id_Double" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="type_product" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="576" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_6"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_SrO30IDJEeKyQemiUo7xzQ-tMap_6-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="20000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="stock_by_site" name="SetAllStockBySite">
+      <column comment="" key="true" length="64" name="ref" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="64" name="site" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="true" length="10" name="warehouse_id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="max_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="min_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="physical_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="out_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="so_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="po_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="virtual_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="annual_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="8" name="aisle" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="29" name="create_date_stock" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="29" name="last_po_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="64" name="last_po_decider" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="64" name="last_po_reason" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="64" name="last_po_supplier" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="29" name="last_move" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="0" name="last_move_type" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="type_stockage" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="qty_multiple" nullable="true" pattern="" precision="2" sourceType="" type="id_Double" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="type_product" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="annual_qty_3" nullable="true" pattern="" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="SetAllStockBySite">
+        <mapperTableEntries name="ref" expression="row11.ref " type="id_String"/>
+        <mapperTableEntries name="site" expression="row11.site " type="id_String" nullable="true"/>
+        <mapperTableEntries name="warehouse_id" expression="row11.warehouse_id " type="id_Integer"/>
+        <mapperTableEntries name="max_qty" expression="row11.max_qty " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="min_qty" expression="row11.min_qty " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="physical_qty" expression="row11.physical_qty " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="out_qty" expression="row11.out_qty " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="so_qty" expression="row11.so_qty " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="po_qty" expression="row11.po_qty " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="virtual_qty" expression="row11.virtual_qty " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="annual_qty" expression="row3.product_uos_qty " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="aisle" expression="row11.aisle " type="id_String" nullable="true"/>
+        <mapperTableEntries name="create_date_stock" expression="row11.write_date " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="last_po_date" expression="(row8.last_po_date !=null) ? row8.last_po_date : row2.last_po_date   " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="last_po_decider" expression="row8.last_po_decider " type="id_String" nullable="true"/>
+        <mapperTableEntries name="last_po_reason" expression="row8.type " type="id_String" nullable="true"/>
+        <mapperTableEntries name="last_po_supplier" expression="row8.last_po_supplier " type="id_String" nullable="true"/>
+        <mapperTableEntries name="last_move" expression="row10.date " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="last_move_type" expression="row10.type " type="id_String" nullable="true"/>
+        <mapperTableEntries name="type_stockage" expression="row11.storage_policy " type="id_String" nullable="true"/>
+        <mapperTableEntries name="qty_multiple" expression="row11.qty_multiple " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="type_product" expression="row11.type_product " type="id_String" nullable="true"/>
+        <mapperTableEntries name="annual_qty_3" expression="row4.product_uos_qty " type="id_Double" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row11" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="id" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="ref" type="id_String" nullable="true"/>
+        <mapperTableEntries name="warehouse_id" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="site" type="id_String" nullable="true"/>
+        <mapperTableEntries name="storage_policy" type="id_String" nullable="true"/>
+        <mapperTableEntries name="aisle" type="id_String" nullable="true"/>
+        <mapperTableEntries name="max_qty" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="min_qty" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="write_date" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="physical_qty" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="virtual_qty" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="out_qty" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="so_qty" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="po_qty" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="qty_multiple" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="type_product" type="id_String" nullable="true"/>
+      </inputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row8" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="product_id" expression="row11.id " type="id_Integer" nullable="true" operator="="/>
+        <mapperTableEntries name="warehouse_id" expression="row11.warehouse_id " type="id_Integer" nullable="true" operator="="/>
+        <mapperTableEntries name="last_po_date" type="id_Date"/>
+        <mapperTableEntries name="last_po_decider" type="id_String"/>
+        <mapperTableEntries name="last_po_supplier" type="id_String"/>
+        <mapperTableEntries name="type" type="id_String" nullable="true"/>
+      </inputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="NOARTICLE" expression="row11.ref" type="id_String" nullable="true"/>
+        <mapperTableEntries name="last_po_date" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="warehouse_id" expression="row11.warehouse_id " type="id_Integer"/>
+      </inputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="default_code" expression="row11.ref" type="id_String" nullable="true"/>
+        <mapperTableEntries name="shop_id" expression="row11.warehouse_id " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="product_uos_qty" expression="" type="id_Double" nullable="true"/>
+      </inputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row10" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="id" expression="row11.id " type="id_Integer"/>
+        <mapperTableEntries name="date" expression="" type="id_Date"/>
+        <mapperTableEntries name="warehouse_id" expression="row11.warehouse_id " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="type" expression="" type="id_String" nullable="true"/>
+      </inputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="default_code" expression="row11.ref" type="id_String" nullable="true"/>
+        <mapperTableEntries name="shop_id" expression="row11.warehouse_id " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="product_uos_qty" type="id_Double" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="-128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_10"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_Bp8msO3BEeGH6b2rAB-u8A"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.0.0.117&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;tech&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;openerp&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;Newtec68&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="_Bp8msO3BEeGH6b2rAB-u8A - GetStockLastPO"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="REPOSITORY"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select purchase_order_line.product_id,purchase_order.warehouse_id, &#xA;purchase_order.date_order as last_po_date, &#xA;decider.name as last_po_decider,&#xA;partner.name as last_po_supplier,&#xA;CASE WHEN procurement_order.id is null THEN 'CREE PAR QUELQU''UN' &#xA;WHEN upper(procurement_order.origin) LIKE '%RESTOCK%' THEN 'MRP'&#xA;ELSE 'SALE ORDER' END AS type&#xA;from purchase_order  &#xA;left join purchase_order_line on purchase_order_line.order_id = purchase_order.id &#xA;left join product_product on product_product.id=purchase_order_line.product_id&#xA;left join procurement_order on procurement_order.purchase_id = purchase_order.id AND &#xA; purchase_order_line.product_id=procurement_order.product_id&#xA;left join res_users decider on decider.id=purchase_order.validator&#xA;left join res_partner partner on partner.id=purchase_order.partner_id&#xA;&#xA;where purchase_order.state not in ('cancel','draft') &#xA;AND (product_product.active=true or product_product.active is null)&#xA;AND product_product.default_code is not null&#xA;order by product_id,warehouse_id,date_order desc&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="product_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="warehouse_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="last_po_date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="last_po_decider"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="last_po_supplier"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="type"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="GetStockLastPO"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tPostgresqlInput_10">
+      <column comment="" defaultValue="" key="false" length="10" name="product_id" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="warehouse_id" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="13" name="last_po_date" nullable="false" pattern="" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="64" name="last_po_decider" nullable="false" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="128" name="last_po_supplier" nullable="false" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="type" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="960" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_3"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_mRTakO3AEeGH6b2rAB-u8A"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;127.0.0.1&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;datamart&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;postgres&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;Newtec68&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;stock_by_site&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="UPDATE_OR_INSERT"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="SPATIAL_INDEX" value="false"/>
+    <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id"/>
+    <elementParameter field="CHECK" name="SAVE_POINT" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ref"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="site"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="warehouse_id"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="max_qty"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="min_qty"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="physical_qty"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="out_qty"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="so_qty"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="po_qty"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="virtual_qty"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="annual_qty"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aisle"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="create_date_stock"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="last_po_date"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="last_po_decider"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="last_po_reason"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="last_po_supplier"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="last_move"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="last_move_type"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="type_stockage"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="qty_multiple"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="type_product"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="annual_qty_3"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="stock_by_site" name="tPostgresqlOutput_3">
+      <column comment="" key="true" length="64" name="ref" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="64" name="site" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="true" length="10" name="warehouse_id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="max_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="min_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="physical_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="out_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="so_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="po_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="virtual_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="annual_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="8" name="aisle" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="29" name="create_date_stock" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="29" name="last_po_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="64" name="last_po_decider" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="64" name="last_po_reason" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="64" name="last_po_supplier" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="29" name="last_move" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="0" name="last_move_type" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="type_stockage" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="qty_multiple" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="type_product" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="annual_qty_3" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" label="stock_by_site" name="REJECT">
+      <column comment="" key="true" length="64" name="ref" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="64" name="site" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="true" length="10" name="warehouse_id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="max_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="min_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="physical_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="out_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="so_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="po_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="virtual_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="annual_qty" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="8" name="aisle" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="29" name="create_date_stock" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="29" name="last_po_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="64" name="last_po_decider" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="64" name="last_po_reason" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="64" name="last_po_supplier" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="29" name="last_move" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="0" name="last_move_type" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="type_stockage" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="qty_multiple" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="type_product" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="annual_qty_3" nullable="true" pattern="" precision="2" sourceType="FLOAT8" type="id_Double" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="832" posY="-128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_1"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_7KdpQPgdEeGMdKi780LSMQ"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.0.0.4&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;Tec&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;sa&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;Vi$ua1&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="_7KdpQPgdEeGMdKi780LSMQ - GetLastPODate"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="REPOSITORY"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select NOARTICLE, MAX(DATE_LIV), &#xA;Case WHEN UPPER(DEPOT_LOCALITE) LIKE 'AWANS%' THEN 1 ELSE 2 END as warehouse_id&#xA;from CmdfournLigne&#xA;LEFT JOIN DEPOT on DEPOT.DEPOT = CmdfournLigne.DEPOT&#xA;group by NOARTICLE, UPPER(DEPOT_LOCALITE)&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;instance=TECHNOFLUID&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="NOARTICLE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="last_po_date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="warehouse_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="GetLastPODate"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tMSSqlInput_1">
+      <column comment="" key="false" length="30" name="NOARTICLE" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="last_po_date" nullable="true" pattern="" precision="3" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="warehouse_id" nullable="false" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="-128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_7"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_Bp8msO3BEeGH6b2rAB-u8A"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.0.0.117&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;tech&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;openerp&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;Newtec68&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="_Bp8msO3BEeGH6b2rAB-u8A - GetStockAnnualQty"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="REPOSITORY"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select default_code,shop_id, sum(product_qty) as product_qty from (&#xD;&#xA;&#x9;select product_product.default_code, 1 as shop_id,sum(product_qty) as product_qty FROM stock_move&#xD;&#xA;&#x9;LEFT JOIN product_product ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;LEFT JOIN stock_picking ON picking_id = stock_picking.id&#xD;&#xA;&#x9;WHERE stock_move.date>=(now()-interval '1 year') AND product_product.active AND &#xA; stock_move.location_id = 15 AND stock_move.location_dest_id = 11&#xD;&#xA;&#x9;AND stock_picking.state not in ('draft','cancel')&#xD;&#xA;&#x9;GROUP BY product_product.default_code&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;select product_product.default_code, 2 as shop_id,sum(product_qty) FROM stock_move&#xD;&#xA;&#x9;LEFT JOIN product_product ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;LEFT JOIN stock_picking ON picking_id = stock_picking.id&#xD;&#xA;&#x9;WHERE stock_move.date>=(now()-interval '1 year') AND product_product.active AND &#xA; stock_move.location_id = 16 AND stock_move.location_dest_id = 17&#xD;&#xA;&#x9;AND stock_picking.state not in ('draft','cancel')&#xD;&#xA;&#x9;GROUP BY product_product.default_code&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;select product_product.default_code, 1 as shop_id,sum(product_qty) * -1 FROM stock_move&#xD;&#xA;&#x9;LEFT JOIN product_product ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;LEFT JOIN stock_picking ON picking_id = stock_picking.id&#xD;&#xA;&#x9;WHERE stock_move.date>=(now()-interval '1 year') AND product_product.active AND &#xA; stock_move.location_id = 9 AND stock_move.location_dest_id = 15&#xD;&#xA;&#x9;AND stock_picking.state not in ('draft','cancel')&#xD;&#xA;&#x9;GROUP BY product_product.default_code&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;select product_product.default_code, 2 as shop_id,sum(product_qty) * -1 FROM stock_move&#xD;&#xA;&#x9;LEFT JOIN product_product ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;LEFT JOIN stock_picking ON picking_id = stock_picking.id&#xD;&#xA;&#x9;WHERE stock_move.date>=(now()-interval '1 year') AND product_product.active AND &#xA; stock_move.location_id = 9 AND stock_move.location_dest_id = 16&#xD;&#xA;&#x9;AND stock_picking.state not in ('draft','cancel')&#xD;&#xA;&#x9;GROUP BY product_product.default_code&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;select product_product.default_code, 1 as shop_id,sum(product_qty) * -1 FROM stock_move&#xD;&#xA;&#x9;LEFT JOIN product_product ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;LEFT JOIN stock_picking ON picking_id = stock_picking.id&#xD;&#xA;&#x9;WHERE stock_move.date>=(now()-interval '1 year') AND product_product.active AND &#xA; stock_move.location_id = 11 AND stock_move.location_dest_id = 15&#xD;&#xA;&#x9;AND stock_picking.state not in ('draft','cancel')&#xD;&#xA;&#x9;GROUP BY product_product.default_code&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;select product_product.default_code, 2 as shop_id,sum(product_qty) * -1 FROM stock_move&#xD;&#xA;&#x9;LEFT JOIN product_product ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;LEFT JOIN stock_picking ON picking_id = stock_picking.id&#xD;&#xA;&#x9;WHERE stock_move.date>=(now()-interval '1 year') AND product_product.active AND &#xA; stock_move.location_id = 17 AND stock_move.location_dest_id = 16&#xD;&#xA;&#x9;AND stock_picking.state not in ('draft','cancel')&#xD;&#xA;&#x9;GROUP BY product_product.default_code&#xD;&#xA;) as res &#xD;&#xA;group by default_code,shop_id&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="default_code"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="shop_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="product_uos_qty"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="GetStockAnnualQty"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tPostgresqlInput_7">
+      <column comment="" key="false" name="default_code" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" name="shop_id" nullable="true" pattern="" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" name="product_uos_qty" nullable="true" pattern="" sourceType="" type="id_Double" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="-128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_12"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_Bp8msO3BEeGH6b2rAB-u8A"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.0.0.117&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;tech&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;openerp&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;Newtec68&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="_Bp8msO3BEeGH6b2rAB-u8A - GetStockLastMove"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="REPOSITORY"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select product_product.id,stock_move.date,&#xA;CASE WHEN stock_move.location_dest_id = 15 OR stock_move.location_id = 15 OR &#xA; stock_move.location_dest_id = 11 OR stock_move.location_id = 11 THEN 1&#xA;WHEN stock_move.location_dest_id = 16 OR stock_move.location_id = 16 OR &#xA; stock_move.location_dest_id = 17 OR stock_move.location_id = 17 THEN 2 END AS warehouse_id,&#xA;CASE WHEN stock_move.origin LIKE '%OUT%' THEN 'OUT' WHEN stock_move.origin LIKE '%INT%' THEN 'INT' &#xA; END AS type&#xA;from stock_move&#xA;left join product_product on product_id=product_product.id&#xA;where (product_product.active=true or product_product.active is null)&#xA;AND stock_move.state != 'draft' AND stock_move.state != 'cancel' &#xA;AND product_product.default_code is not null&#xA;order by product_product.id,stock_move.date DESC&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="warehouse_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="type"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="GetStockLastMove"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tPostgresqlInput_12">
+      <column comment="" defaultValue="" key="false" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="29" name="date" nullable="false" pattern="" precision="6" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="warehouse_id" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="type" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="-128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_8"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_Bp8msO3BEeGH6b2rAB-u8A"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.0.0.117&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;tech&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;openerp&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;Newtec68&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="_Bp8msO3BEeGH6b2rAB-u8A - GetStockAnnualQty_3_year"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="REPOSITORY"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select default_code,shop_id, sum(product_qty) as product_qty from (&#xD;&#xA;&#x9;select product_product.default_code, 1 as shop_id,sum(product_qty) as product_qty FROM stock_move&#xD;&#xA;&#x9;LEFT JOIN product_product ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;LEFT JOIN stock_picking ON picking_id = stock_picking.id&#xD;&#xA;&#x9;WHERE stock_move.date>=(now()-interval '3 year') AND product_product.active AND &#xA; stock_move.location_id = 15 AND stock_move.location_dest_id = 11&#xD;&#xA;&#x9;AND stock_picking.state not in ('draft','cancel')&#xD;&#xA;&#x9;GROUP BY product_product.default_code&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;select product_product.default_code, 2 as shop_id,sum(product_qty) FROM stock_move&#xD;&#xA;&#x9;LEFT JOIN product_product ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;LEFT JOIN stock_picking ON picking_id = stock_picking.id&#xD;&#xA;&#x9;WHERE stock_move.date>=(now()-interval '3 year') AND product_product.active AND &#xA; stock_move.location_id = 16 AND stock_move.location_dest_id = 17&#xD;&#xA;&#x9;AND stock_picking.state not in ('draft','cancel')&#xD;&#xA;&#x9;GROUP BY product_product.default_code&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;select product_product.default_code, 1 as shop_id,sum(product_qty) * -1 FROM stock_move&#xD;&#xA;&#x9;LEFT JOIN product_product ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;LEFT JOIN stock_picking ON picking_id = stock_picking.id&#xD;&#xA;&#x9;WHERE stock_move.date>=(now()-interval '3 year') AND product_product.active AND &#xA; stock_move.location_id = 9 AND stock_move.location_dest_id = 15&#xD;&#xA;&#x9;AND stock_picking.state not in ('draft','cancel')&#xD;&#xA;&#x9;GROUP BY product_product.default_code&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;select product_product.default_code, 2 as shop_id,sum(product_qty) * -1 FROM stock_move&#xD;&#xA;&#x9;LEFT JOIN product_product ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;LEFT JOIN stock_picking ON picking_id = stock_picking.id&#xD;&#xA;&#x9;WHERE stock_move.date>=(now()-interval '3 year') AND product_product.active AND &#xA; stock_move.location_id = 9 AND stock_move.location_dest_id = 16&#xD;&#xA;&#x9;AND stock_picking.state not in ('draft','cancel')&#xD;&#xA;&#x9;GROUP BY product_product.default_code&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;select product_product.default_code, 1 as shop_id,sum(product_qty) * -1 FROM stock_move&#xD;&#xA;&#x9;LEFT JOIN product_product ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;LEFT JOIN stock_picking ON picking_id = stock_picking.id&#xD;&#xA;&#x9;WHERE stock_move.date>=(now()-interval '3 year') AND product_product.active AND &#xA; stock_move.location_id = 11 AND stock_move.location_dest_id = 15&#xD;&#xA;&#x9;AND stock_picking.state not in ('draft','cancel')&#xD;&#xA;&#x9;GROUP BY product_product.default_code&#xD;&#xA;&#xD;&#xA;&#x9;UNION&#xD;&#xA;&#xD;&#xA;&#x9;select product_product.default_code, 2 as shop_id,sum(product_qty) * -1 FROM stock_move&#xD;&#xA;&#x9;LEFT JOIN product_product ON stock_move.product_id = product_product.id&#xD;&#xA;&#x9;LEFT JOIN stock_picking ON picking_id = stock_picking.id&#xD;&#xA;&#x9;WHERE stock_move.date>=(now()-interval '3 year') AND product_product.active AND &#xA; stock_move.location_id = 17 AND stock_move.location_dest_id = 16&#xD;&#xA;&#x9;AND stock_picking.state not in ('draft','cancel')&#xD;&#xA;&#x9;GROUP BY product_product.default_code&#xD;&#xA;) as res &#xD;&#xA;group by default_code,shop_id&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="default_code"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="shop_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="product_uos_qty"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="GetStockAnnualQty_3_year"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tPostgresqlInput_8">
+      <column comment="" key="false" name="default_code" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" name="shop_id" nullable="true" pattern="" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" name="product_uos_qty" nullable="true" pattern="" sourceType="" type="id_Double" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tPostgresqlInput_9">
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tPostgresqlInput_13">
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2"/>
+  </connection>
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tPostgresqlInput_13" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_13" target="tMap_3">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="ref"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="site"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="warehouse_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="max_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="min_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="physical_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="out_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="so_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="po_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="virtual_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="annual_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aisle_awans"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aisle_wetteren"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="create_date"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="type"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="last_po_date"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="last_po_decider"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="last_po_reason"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="last_po_supplier"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="last_move"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5"/>
+  </connection>
+  <connection connectorName="FLOW" label="OutPutStreamIsActived" lineStyle="0" metaname="OutPutStreamIsActived" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tFilterRow_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="ref"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="scd_remove"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="warehouse_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OutPutStreamIsActived"/>
+  </connection>
+  <connection connectorName="FLOW" label="OutPutStreamKeyActive" lineStyle="8" metaname="OutPutStreamKeyActive" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tMap_3">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="scd_remove"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ref"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="product_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="warehouse_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OutPutStreamKeyActive"/>
+  </connection>
+  <connection connectorName="FILTER" label="row6" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_1" target="tMap_4">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="ref"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="warehouse_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="scd_remove"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6"/>
+  </connection>
+  <connection connectorName="FLOW" label="OUtPutActive" lineStyle="0" metaname="OUtPutActive" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tPostgresqlOutput_2">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER"/>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OUtPutActive"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tPostgresqlInput_2" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_2" target="tMap_2">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ref"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="warehouse_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="site"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="storage_policy"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aisle"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="max_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="min_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="write_date"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="physical_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="virtual_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="out_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="so_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="po_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row11" lineStyle="0" metaname="tPostgresqlInput_9" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_9" target="tMap_6">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ref"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="warehouse_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="site"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="storage_policy"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="qty_multiple"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="type_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="type_product"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row11"/>
+  </connection>
+  <connection connectorName="FLOW" label="SetAllStockBySite" lineStyle="0" metaname="SetAllStockBySite" offsetLabelX="0" offsetLabelY="0" source="tMap_6" target="tPostgresqlOutput_3">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="ref"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="site"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="warehouse_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="max_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="min_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="physical_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="out_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="so_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="po_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="virtual_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="annual_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="aisle"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="create_date_stock"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="last_po_date"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="last_po_decider"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="last_po_reason"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="last_po_supplier"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="last_move"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="last_move_type"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="type_stockage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="qty_multiple"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="type_product"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="annual_qty_3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="SetAllStockBySite"/>
+  </connection>
+  <connection connectorName="FLOW" label="row8" lineStyle="8" metaname="tPostgresqlInput_10" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_10" target="tMap_6">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="product_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="warehouse_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="last_po_date"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="last_po_decider"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="last_po_supplier"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row8"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="8" metaname="tMSSqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_1" target="tMap_6">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="last_po_date"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="8" metaname="tPostgresqlInput_7" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_7" target="tMap_6">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="default_code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="shop_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="product_uos_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3"/>
+  </connection>
+  <connection connectorName="FLOW" label="row10" lineStyle="8" metaname="tPostgresqlInput_12" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_12" target="tMap_6">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER"/>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row10"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="8" metaname="tPostgresqlInput_8" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_8" target="tMap_6">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="default_code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="shop_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="product_uos_qty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_13"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_9"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+</talendfile:ProcessType>

@@ -1,0 +1,71 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
+  <expression:EMFExpression id="null=>OutPutStreamUsers=>email" expression="row1.Representant'@technofluid.be'">
+    <variables name="row1.newColumn" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.newColumn1" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.newColumn2" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.newColumn3" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.newColumn4" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.newColumn5" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.newColumn6" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.newColumn7" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.newColumn8" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.Representant" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.Siege" value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>OutPutStreamUsers=>login" expression="row1.REPRESENTANT.toUpperCase()">
+    <variables name="row1.annee" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.mois" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.CODE_STAT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.FOURNISSEUR" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.DEPARTEMENT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.REALDEPARTEMENT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.FAMILLE" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.NOARTICLE" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.QUANTITE" value="null" talendType="id_BigDecimal" nullable="true"/>
+    <variables name="row1.NOCLIENT" value="null" talendType="id_String"/>
+    <variables name="row1.REPRESENTANT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.Siege" value="null" talendType="id_String"/>
+    <variables name="row1.PV" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row1.PR" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row1.k" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row1.Journal" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.NoInt_Activite" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.User_Cr" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.CMD" value="0" talendType="id_Integer"/>
+    <variables name="row1.NOORDRE" value="0" talendType="id_Integer"/>
+    <variables name="row1.DATE_CMD" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row1.TYPEDOC" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.NODOC" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.Marche" value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>OutPutStreamSales=>is_sale_counter" expression="(row1.is_sale_counter==1) ? true : false">
+    <variables name="row1.annee" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.mois" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.CODE_STAT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.FOURNISSEUR" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.DEPARTEMENT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.REALDEPARTEMENT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.FAMILLE" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.NOARTICLE" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.QUANTITE" value="null" talendType="id_BigDecimal" nullable="true"/>
+    <variables name="row1.NOCLIENT" value="null" talendType="id_String"/>
+    <variables name="row1.REPRESENTANT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.Siege" value="null" talendType="id_String"/>
+    <variables name="row1.margin" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row1.PV" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row1.PR" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row1.k" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row1.Journal" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.NoInt_Activite" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.User_Cr" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.CMD" value="0" talendType="id_Integer"/>
+    <variables name="row1.NOORDRE" value="0" talendType="id_Integer"/>
+    <variables name="row1.DATE_CMD" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row1.TYPEDOC" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.NODOC" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.Marche" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.codepost" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.is_sale_counter" value="null" talendType="id_Boolean" nullable="true"/>
+  </expression:EMFExpression>
+</xmi:XMI>

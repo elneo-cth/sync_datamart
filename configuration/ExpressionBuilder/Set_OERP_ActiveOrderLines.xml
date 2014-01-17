@@ -1,0 +1,36 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<expression:EMFExpression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore" id="null=>OutPutStreamIsActived=>scd_remove" expression="(OutPutStreamKeyActive.scd_remove == null) ? true : OutPutStreamKeyActive.scd_remove ">
+  <variables name="row2.id_scd" value="0" talendType="id_Integer"/>
+  <variables name="row2.ref" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.type" value="null" talendType="id_String" nullable="true"/>
+  <variables name="OutPutStreamKeyActive.scd_remove" value="null" talendType="id_Boolean" nullable="true"/>
+  <variables name="OutPutStreamKeyActive.order_line_ref" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.order_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row2.user_create_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row2.section_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row2.user_rep_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row2.shop_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row2.customer_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row2.date_confirm_scd" value="null" talendType="id_Date" nullable="true"/>
+  <variables name="row2.product_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row2.supplier_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row2.categ_dpt_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row2.categ_family_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row2.categ_subfamily_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row2.pr" value="null" talendType="id_Double" nullable="true"/>
+  <variables name="row2.pv" value="null" talendType="id_Double" nullable="true"/>
+  <variables name="row2.k" value="null" talendType="id_Double" nullable="true"/>
+  <variables name="row2.product_uos_qty" value="null" talendType="id_Double" nullable="true"/>
+  <variables name="row2.price_unit" value="null" talendType="id_Double" nullable="true"/>
+  <variables name="row2.discount" value="null" talendType="id_Double" nullable="true"/>
+  <variables name="row2.product_uos" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row2.margin" value="null" talendType="id_Double" nullable="true"/>
+  <variables name="row2.purchase_price" value="null" talendType="id_Double" nullable="true"/>
+  <variables name="row2.scd_start" value="null" talendType="id_Date" nullable="true"/>
+  <variables name="row2.scd_end" value="null" talendType="id_Date" nullable="true"/>
+  <variables name="row2.scd_active" value="null" talendType="id_Boolean" nullable="true"/>
+  <variables name="row2.scd_remove" value="null" talendType="id_Boolean" nullable="true"/>
+  <variables name="row2.order_line_ref" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.order_type" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.sales_counter_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+</expression:EMFExpression>

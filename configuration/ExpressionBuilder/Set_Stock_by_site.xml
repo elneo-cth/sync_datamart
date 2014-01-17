@@ -1,0 +1,260 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
+  <expression:EMFExpression id="null=>SetStockBySite=>po_qty" expression="(row10.warehouse_id != null &amp;&amp; row10.warehouse_id==row1.warehouse_id) ? ((row10.po_qty != null) ? row10.po_qty : 0) : ((row10.po_qty != null)  ? row11.po_qty : 0)  ">
+    <variables name="row1.id" value="0" talendType="id_Integer"/>
+    <variables name="row1.ref" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.warehouse_id" value="0" talendType="id_Integer"/>
+    <variables name="row1.site" value="null" talendType="id_String"/>
+    <variables name="row1.max_qty" value="0" talendType="id_Double"/>
+    <variables name="row1.min_qty" value="0" talendType="id_Double"/>
+    <variables name="row1.aisle_awans" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.aisle_wetteren" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.write_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row2.product_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.last_po_date" value="null" talendType="id_Date"/>
+    <variables name="row2.last_po_decider" value="null" talendType="id_String"/>
+    <variables name="row2.last_po_supplier" value="null" talendType="id_String"/>
+    <variables name="row3.id" value="0" talendType="id_Integer"/>
+    <variables name="row3.date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row7.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.sum" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row8.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row8.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row8.physical_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row8.virtual_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row8.out_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row9.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row9.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row9.physical_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row9.virtual_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row9.out_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row10.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row10.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row10.so_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row10.po_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row11.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row11.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row11.so_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row11.po_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="&quot;/>&#xA;  &lt;/expression" value="ssio" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.type_awans" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.type_wetteren" value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>SetStockBySite=>physical_qty" expression="(row8.warehouse_id != null &amp;&amp; row8.warehouse_id== row1.warehouse_id) ? ((row8.physical_qty != null) ? row8.physical_qty : 0) : ((row8.physical_qty != null) ?row9.physical_qty : 0)    ">
+    <variables name="row1.id" value="0" talendType="id_Integer"/>
+    <variables name="row1.ref" value="null" talendType="id_String" nullable="true"/>
+    <variables name="=&quot;null&quot; talendTyp" value="e" talendType="id_Integer"/>
+    <variables name="row1.site" value="null" talendType="id_String"/>
+    <variables name="row1.max_qty" value="0" talendType="id_Double"/>
+    <variables name="row1.min_qty" value="0" talendType="id_Double"/>
+    <variables name="row1.aisle_awans" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.aisle_wetteren" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.write_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row2.product_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.last_po_date" value="null" talendType="id_Date"/>
+    <variables name="row2.last_po_decider" value="null" talendType="id_String"/>
+    <variables name="row2.last_po_supplier" value="null" talendType="id_String"/>
+    <variables name="row3.id" value="0" talendType="id_Integer"/>
+    <variables name="row3.date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row7.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.sum" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row8.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row8.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row8.physical_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row8.virtual_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row8.out_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row9.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row9.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row9.physical_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row9.virtual_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row9.out_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row10.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row10.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row10.so_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row10.po_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row11.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row11.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row11.so_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row11.po_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="&quot;row7.sum&quot; value=&quot;n" value="ndTy" talendType="id_String" nullable="true"/>
+    <variables name="row1.type_awans" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.type_wetteren" value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>SetStockBySite=>out_qty" expression="(row8.warehouse_id != null &amp;&amp; row8.warehouse_id== row1.warehouse_id) ? ((row8.out_qty != null) ? row8.out_qty : 0) : ((row8.out_qty != null) ?row9.out_qty : 0)   ">
+    <variables name="row1.id" value="0" talendType="id_Integer"/>
+    <variables name="row1.ref" value="null" talendType="id_String" nullable="true"/>
+    <variables name="ame=&quot;row1.write_d" value="0" talendType="id_Integer"/>
+    <variables name="row1.site" value="null" talendType="id_String"/>
+    <variables name="row1.max_qty" value="0" talendType="id_Double"/>
+    <variables name="row1.min_qty" value="0" talendType="id_Double"/>
+    <variables name="row1.aisle_awans" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.aisle_wetteren" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.write_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row2.product_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.last_po_date" value="null" talendType="id_Date"/>
+    <variables name="row2.last_po_decider" value="null" talendType="id_String"/>
+    <variables name="row2.last_po_supplier" value="null" talendType="id_String"/>
+    <variables name="row3.id" value="0" talendType="id_Integer"/>
+    <variables name="row3.date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row7.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.sum" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row8.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row8.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row8.physical_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row8.virtual_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row8.out_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row9.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row9.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row9.physical_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row9.virtual_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row9.out_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row10.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row10.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row10.so_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row10.po_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row11.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row11.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row11.so_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row11.po_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="value=&quot;null&quot;" value=" " talendType=">&#xA;    &lt;va"/>
+    <variables name="=&quot;id_Integer&quot; nulla" value="&quot;/>&#xA;" talendType="id_String" nullable="true"/>
+    <variables name="row1.type_awans" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.type_wetteren" value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>SetStockBySite=>so_qty" expression="(row10.warehouse_id != null &amp;&amp; row10.warehouse_id==row1.warehouse_id) ? ((row10.so_qty != null) ? row10.so_qty : 0) : ((row10.so_qty != null)  ? row11.so_qty : 0)   ">
+    <variables name="row1.id" value="0" talendType="id_Integer"/>
+    <variables name="row1.ref" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.warehouse_id" value="0" talendType="id_Integer"/>
+    <variables name="row1.site" value="null" talendType="id_String"/>
+    <variables name="row1.max_qty" value="0" talendType="id_Double"/>
+    <variables name="row1.min_qty" value="0" talendType="id_Double"/>
+    <variables name="row1.aisle_awans" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.aisle_wetteren" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.write_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row2.product_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.last_po_date" value="null" talendType="id_Date"/>
+    <variables name="row2.last_po_decider" value="null" talendType="id_String"/>
+    <variables name="row2.last_po_supplier" value="null" talendType="id_String"/>
+    <variables name="row3.id" value="0" talendType="id_Integer"/>
+    <variables name="row3.date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row7.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.sum" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row8.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row8.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row8.physical_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row8.virtual_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row8.out_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row9.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row9.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row9.physical_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row9.virtual_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row9.out_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row10.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row10.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row10.so_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row10.po_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row11.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row11.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row11.so_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row11.po_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name=".sum&quot; value=&quot;null&quot; " value="e=&quot;i" talendType="id_String" nullable="true"/>
+    <variables name="row1.type_awans" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.type_wetteren" value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>SetStockBySite=>virtual_qty" expression="(row8.warehouse_id != null &amp;&amp; row8.warehouse_id== row1.warehouse_id) ? ((row8.virtual_qty != null) ? row8.virtual_qty : 0) : ((row8.virtual_qty != null) ?row9.virtual_qty : 0)    ">
+    <variables name="row1.id" value="0" talendType="id_Integer"/>
+    <variables name="row1.ref" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.warehouse_id" value="0" talendType="id_Integer"/>
+    <variables name="row1.site" value="null" talendType="id_String"/>
+    <variables name="row1.max_qty" value="0" talendType="id_Double"/>
+    <variables name="row1.min_qty" value="0" talendType="id_Double"/>
+    <variables name="row1.aisle_awans" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.aisle_wetteren" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.write_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row2.product_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.last_po_date" value="null" talendType="id_Date"/>
+    <variables name="row2.last_po_decider" value="null" talendType="id_String"/>
+    <variables name="row2.last_po_supplier" value="null" talendType="id_String"/>
+    <variables name="row3.id" value="0" talendType="id_Integer"/>
+    <variables name="row3.date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row7.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.sum" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row8.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row8.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row8.physical_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row8.virtual_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row8.out_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row9.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row9.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row9.physical_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row9.virtual_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row9.out_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row10.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row10.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row10.so_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row10.po_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row11.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row11.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row11.so_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row11.po_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="rue&quot;/>&#xA;  " value="null" talendType="id_String"/>
+    <variables name="e&quot;/>&#xA;    &lt;variables" value="w7.d" talendType="id_String" nullable="true"/>
+    <variables name="row1.type_awans" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.type_wetteren" value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>OutPutStockType=>create_date" expression="(row12.create_date==null &amp;&amp; row12.type==&quot;STOCKED&quot;) ? &#xA;TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,&quot;2012-01-01&quot;)&#xA;: row12.create_date   ">
+    <variables name="row12.ref" value="null" talendType="id_String"/>
+    <variables name="row12.warehouse_id" value="0" talendType="id_Integer"/>
+    <variables name="row12.create_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row12.type" value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>OutPutStockType=>create_date_stock" expression="(row12.create_date_stock==null &amp;&amp; row12.type==&quot;STOCKED&quot;) ? &#xA;TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,&quot;2012-01-01&quot;)&#xA;: row12.create_date_stock    ">
+    <variables name="row12.ref" value="null" talendType="id_String"/>
+    <variables name="row12.warehouse_id" value="0" talendType="id_Integer"/>
+    <variables name="row12.create_date_stock" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row12.type" value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>SetAllStockBySite=>last_po_date" expression="(row8.last_po_date !=null) ? row8.last_po_date : row2.last_po_date  ">
+    <variables name="row11.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row11.ref" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row11.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row11.site" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row11.storage_policy" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row11.aisle" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row11.max_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row11.min_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row11.write_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row11.physical_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row11.virtual_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row11.out_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row11.so_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row11.po_qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row8.product_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row8.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row8.last_po_date" value="null" talendType="id_Date"/>
+    <variables name="row8.last_po_decider" value="null" talendType="id_String"/>
+    <variables name="row8.last_po_supplier" value="null" talendType="id_String"/>
+    <variables name="row8.type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row10.id" value="0" talendType="id_Integer"/>
+    <variables name="row10.date" value="null" talendType="id_Date"/>
+    <variables name="row10.warehouse_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row10.type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row9.default_code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row9.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row9.sum" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.NOARTICLE" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.last_po_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row2.warehouse_id" value="0" talendType="id_Integer"/>
+    <variables name="row2.date_last_po" value="null" talendType="id_Date" nullable="true"/>
+  </expression:EMFExpression>
+</xmi:XMI>

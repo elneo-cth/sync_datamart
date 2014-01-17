@@ -1,0 +1,55 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
+  <expression:EMFExpression id="null=>date=>id_scd" expression="(Input.date_confirm_scd==null)?null:TalendDate.parseDate(&quot;dd-MM-yyyy&quot;,Input.date_confirm_scd )  ">
+    <variables name="Input.user_login" value="null" talendType="id_String"/>
+    <variables name="Input.user_section" value="null" talendType="id_String"/>
+    <variables name="Input.user_site" value="null" talendType="id_String"/>
+    <variables name="Input.is_counter" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="Input.month" value="0" talendType="id_Integer"/>
+    <variables name="Input.year" value="0" talendType="id_Integer"/>
+    <variables name="Input.goal" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="Input.goal_prime" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="Input.base_prime" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="Input.cost" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="date.id_scd" value="null" talendType="id_Date"/>
+    <variables name="date.day" value="0" talendType="id_Integer"/>
+    <variables name="date.month" value="0" talendType="id_Integer"/>
+    <variables name="date.year" value="0" talendType="id_Integer"/>
+    <variables name="date.quarter" value="0" talendType="id_Integer"/>
+    <variables name="user.id_scd" value="0" talendType="id_Integer"/>
+    <variables name="user.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="user.login" value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>OutPutFactGoal=>section_id_scd" expression="(OutPutFactGoalERP_ID.site==null)?section.id_scd:row2.id_scd   ">
+    <variables name="OutPutFactGoalERP_ID.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFactGoalERP_ID.date_confirm_scd" value="null" talendType="id_String" nullable="true"/>
+    <variables name="OutPutFactGoalERP_ID.user_login" value="null" talendType="id_String" nullable="true"/>
+    <variables name="OutPutFactGoalERP_ID.is_counter" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="OutPutFactGoalERP_ID.month" value="0" talendType="id_Integer"/>
+    <variables name="OutPutFactGoalERP_ID.year" value="0" talendType="id_Integer"/>
+    <variables name="OutPutFactGoalERP_ID.goal" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutFactGoalERP_ID.goal_prime" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutFactGoalERP_ID.base_prime" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutFactGoalERP_ID.cost" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutFactGoalERP_ID.section_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFactGoalERP_ID.shop_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFactGoalERP_ID.site" value="null" talendType="id_String" nullable="true"/>
+    <variables name="date.id_scd" value="null" talendType="id_Date"/>
+    <variables name="date.day" value="0" talendType="id_Integer"/>
+    <variables name="date.month" value="0" talendType="id_Integer"/>
+    <variables name="date.year" value="0" talendType="id_Integer"/>
+    <variables name="date.quarter" value="0" talendType="id_Integer"/>
+    <variables name="user.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="user.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="user.login" value="null" talendType="id_String" nullable="true"/>
+    <variables name="shop.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="shop.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="shop.name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="section.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="section.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="section.code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.code" value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+</xmi:XMI>

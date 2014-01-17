@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:FileExcelConnection xmi:id="_us5moI_OEeKzrYd94yoizQ" name="Unpaid_comment" dataPackage="_us6NsI_OEeKzrYd94yoizQ" Server="Localhost 127.0.0.1" FilePath="/home/fle/Desktop/query.xls" Encoding="ISO-8859-1" UseHeader="true" HeaderValue="1" UseLimit="true" LimitValue="2" FirstLineCaption="true" SheetName="Requ�te9" firstColumn="1" lastColumn="2" thousandSeparator="','" decimalSeparator="'.'" selectAllSheets="true" sheetList="Requ�te9:w&#xA;">
+    <sheetColumns>A</sheetColumns>
+    <sheetColumns>B</sheetColumns>
+  </TalendMetadata:FileExcelConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_us6NsI_OEeKzrYd94yoizQ" name="default" dataManager="_us5moI_OEeKzrYd94yoizQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_us6NsY_OEeKzrYd94yoizQ" id="_Sc24cI_OEeKzrYd94yoizQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_us6Nso_OEeKzrYd94yoizQ" label="COMPTES" length="300" talendType="id_String" key="true" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_us6Ns4_OEeKzrYd94yoizQ" label="Imp_en_cours" length="359" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

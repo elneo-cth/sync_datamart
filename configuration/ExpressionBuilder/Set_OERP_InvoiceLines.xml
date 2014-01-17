@@ -1,0 +1,250 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
+  <expression:EMFExpression id="null=>OutPutInvoiceLine_OERP=>margin" expression="(row2.type =='in_invoice') ? row2.margin : 0-row2.margin">
+    <variables name="row2.id" value="0" talendType="id_Integer"/>
+    <variables name="row2.product_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.order_id" value="0" talendType="id_Integer"/>
+    <variables name="row2.price_unit" value="0" talendType="id_Double"/>
+    <variables name="row2.discount" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.purchase_price" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.margin" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.pv" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.pr" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.k" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.representant" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.section_id" value="0" talendType="id_Integer"/>
+    <variables name="row2.order_line_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="OutPutFilledProducts.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.supplier_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.categ_subfamily_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.categ_family_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.categ_dpt_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.customer_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.shop_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.create_uid_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.date_confirm_scd" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="OutPutFilledOrders.sales_counter_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.invoiced_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row13.id_scd" value="0" talendType="id_Integer"/>
+    <variables name="row13.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row13.login" value="null" talendType="id_String"/>
+    <variables name="OutPutStreamSections.id" value="0" talendType="id_Integer"/>
+    <variables name="OutPutStreamSections.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutType.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutType.type" value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>OutPutInvoiceLine_OERP=>pv" expression="(row2.type =&quot;in_invoice&quot;) ? row2.pv : 0-row2.pv ">
+    <variables name="row2.id" value="0" talendType="id_Integer"/>
+    <variables name="row2.product_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.order_id" value="0" talendType="id_Integer"/>
+    <variables name="row2.price_unit" value="0" talendType="id_Double"/>
+    <variables name="row2.discount" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.purchase_price" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.margin" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.pv" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.pr" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.k" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.representant" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.section_id" value="0" talendType="id_Integer"/>
+    <variables name="row2.order_line_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="OutPutFilledProducts.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.supplier_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.categ_subfamily_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.categ_family_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.categ_dpt_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.customer_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.shop_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.create_uid_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.date_confirm_scd" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="OutPutFilledOrders.sales_counter_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.invoiced_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row13.id_scd" value="0" talendType="id_Integer"/>
+    <variables name="row13.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row13.login" value="null" talendType="id_String"/>
+    <variables name="OutPutStreamSections.id" value="0" talendType="id_Integer"/>
+    <variables name="OutPutStreamSections.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutType.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutType.type" value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>OutPutInvoiceLine_OERP=>pr" expression="(!row2.type.equals(&quot;out_refund&quot;)) ? row2.pr : 0-row2.pr   ">
+    <variables name="row2.id" value="0" talendType="id_Integer"/>
+    <variables name="row2.product_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.order_id" value="0" talendType="id_Integer"/>
+    <variables name="row2.price_unit" value="0" talendType="id_Double"/>
+    <variables name="row2.discount" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.purchase_price" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.margin" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.pv" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="ype=&quot;id" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.k" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.representant" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.section_id" value="0" talendType="id_Integer"/>
+    <variables name="row2.order_line_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="OutPutFilledProducts.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.supplier_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.categ_subfamily_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.categ_family_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.categ_dpt_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.customer_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.shop_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.create_uid_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.date_confirm_scd" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="OutPutFilledOrders.sales_counter_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.invoiced_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row13.id_scd" value="0" talendType="id_Integer"/>
+    <variables name="row13.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row13.login" value="null" talendType="id_String"/>
+    <variables name="OutPutStreamSections.id" value="0" talendType="id_Integer"/>
+    <variables name="OutPutStreamSections.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutType.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutType.type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row21.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row21.id" value="null" talendType="id_Integer" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>row7=>is_sales_counter" expression="(OutPutOrders.create_uid != null &amp;&amp; (OutPutOrders.create_uid==58 || OutPutOrders.create_uid==47)) ? true : false    ">
+    <variables name="OutPutOrders.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutOrders.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutOrders.create_uid" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutOrders.shop_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutOrders.partner_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutOrders.user_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutOrders.date_confirm" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="OutPutOrders.shop_sale" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="OutPutOrders.is_invoiced" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row6.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row6.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row20.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row20.is_invoiced" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row7.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.is_sales_counter" value="null" talendType="id_Boolean" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>" expression="(OutPutInvoiceLine.date_confirm==null&#xA;|| OutPutInvoiceLine.section_id==9|| OutPutInvoiceLine.section_id==10|| OutPutInvoiceLine.section_id==11) ? OutPutInvoiceLine.date_invoice : OutPutInvoiceLine.date_confirm&#xA;   ">
+    <variables name="OutPutInvoiceLine.account_invoice_line_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutInvoiceLine.product_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutInvoiceLine.quantity" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutInvoiceLine.account_invoice_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutInvoiceLine.order_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutInvoiceLine.price_unit" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutInvoiceLine.discount" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutInvoiceLine.purchase_price" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutInvoiceLine.margin" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutInvoiceLine.pv" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutInvoiceLine.pr" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutInvoiceLine.k" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutInvoiceLine.representant" value="null" talendType="id_String" nullable="true"/>
+    <variables name="OutPutInvoiceLine.section_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutInvoiceLine.order_line_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutInvoiceLine.type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="OutPutInvoiceLine.zip" value="null" talendType="id_String" nullable="true"/>
+    <variables name="OutPutInvoiceLine.date_confirm" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="OutPutInvoiceLine.date_invoice" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="OutPutInvoiceLine.LOOKUP" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.supplier_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.categ_subfamily_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.categ_family_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.categ_dpt_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.shop_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.invoiced_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.sales_counter_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row13.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row13.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row13.login" value="null" talendType="id_String" nullable="true"/>
+    <variables name="OutPutStreamSections.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutStreamSections.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutType.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutType.type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row21.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row21.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledInvoices.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledInvoices.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledInvoices.customer_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledInvoices.create_uid_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row5.id_scd" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row2.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.id" value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>row5=>id_scd" expression="OutPutInvoiceLine.date_confirm   ">
+    <variables name="OutPutInvoiceLine.account_invoice_line_id" value="0" talendType="id_Integer"/>
+    <variables name="OutPutInvoiceLine.product_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutInvoiceLine.quantity" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutInvoiceLine.account_invoice_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutInvoiceLine.order_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutInvoiceLine.price_unit" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutInvoiceLine.discount" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutInvoiceLine.purchase_price" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutInvoiceLine.margin" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutInvoiceLine.margin_with_services" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutInvoiceLine.number_of_lines" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutInvoiceLine.pv" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutInvoiceLine.pr" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutInvoiceLine.k" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutInvoiceLine.representant" value="null" talendType="id_String" nullable="true"/>
+    <variables name="OutPutInvoiceLine.section_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutInvoiceLine.order_line_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutInvoiceLine.type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="OutPutInvoiceLine.zip" value="null" talendType="id_String" nullable="true"/>
+    <variables name="OutPutInvoiceLine.date_confirm" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="OutPutInvoiceLine.shop_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutInvoiceLine.ignored_for_stat" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="OutPutInvoiceLine.LOOKUP" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.supplier_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.categ_subfamily_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.categ_family_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.categ_dpt_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledProducts.categ_group_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row13.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row13.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row13.login" value="null" talendType="id_String" nullable="true"/>
+    <variables name="OutPutStreamSections.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutStreamSections.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutType.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutType.type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row21.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row21.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledInvoices.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledInvoices.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledInvoices.customer_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledInvoices.create_uid_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledInvoices.fully_paid" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="OutPutFilledInvoices.fully_invoiced" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="OutPutFilledInvoices.is_sale_counter" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="OutPutFilledInvoices.fully_shipped" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row5.id_scd" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row2.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.id" value="null" talendType="id_String" nullable="true"/>
+    <variables name="OutPutShop.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutShop.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutOrder.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutOrder.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutInvoiceLine.date_invoice" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="OutPutInvoiceLine.invoice_line_id" value="0" talendType="id_Integer"/>
+    <variables name="OutPutInvoiceLine.qty" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="OutPutInvoiceLine.invoice_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.shop_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.invoiced_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutFilledOrders.sales_counter_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+  </expression:EMFExpression>
+</xmi:XMI>

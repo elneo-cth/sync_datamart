@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_bnv1oCywEeKwVfurbTQbHw" dataPackage="_bnv1oSywEeKwVfurbTQbHw"/>
+  <TalendMetadata:GenericPackage xmi:id="_bnv1oSywEeKwVfurbTQbHw" dataManager="_bnv1oCywEeKwVfurbTQbHw">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_bnv1oiywEeKwVfurbTQbHw" id="_bnungCywEeKwVfurbTQbHw" label="fact_sale_order_line">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1oyywEeKwVfurbTQbHw" name="id_scd" label="id_scd" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
+        <initialValue xmi:id="_bnv1pCywEeKwVfurbTQbHw" body="nextval('fact_sale_order_line_id_scd_seq'::regclass)"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1pSywEeKwVfurbTQbHw" name="order_id_scd" label="order_id_scd" length="10" sourceType="INT4" talendType="id_Integer">
+        <initialValue xmi:id="_bnv1piywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1pyywEeKwVfurbTQbHw" name="user_create_id_scd" label="user_create_id_scd" length="10" sourceType="INT4" talendType="id_Integer">
+        <initialValue xmi:id="_bnv1qCywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1qSywEeKwVfurbTQbHw" name="section_id_scd" label="section_id_scd" length="10" sourceType="INT4" talendType="id_Integer">
+        <initialValue xmi:id="_bnv1qiywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1qyywEeKwVfurbTQbHw" name="user_rep_id_scd" label="user_rep_id_scd" length="10" sourceType="INT4" talendType="id_Integer">
+        <initialValue xmi:id="_bnv1rCywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1rSywEeKwVfurbTQbHw" name="shop_id_scd" label="shop_id_scd" length="10" sourceType="INT4" talendType="id_Integer">
+        <initialValue xmi:id="_bnv1riywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1ryywEeKwVfurbTQbHw" name="customer_id_scd" label="customer_id_scd" length="10" sourceType="INT4" talendType="id_Integer">
+        <initialValue xmi:id="_bnv1sCywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1sSywEeKwVfurbTQbHw" name="date_confirm_scd" label="date_confirm_scd" length="13" sourceType="DATE" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_bnv1siywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1syywEeKwVfurbTQbHw" name="product_id_scd" label="product_id_scd" length="10" sourceType="INT4" talendType="id_Integer">
+        <initialValue xmi:id="_bnv1tCywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1tSywEeKwVfurbTQbHw" name="supplier_id_scd" label="supplier_id_scd" length="10" sourceType="INT4" talendType="id_Integer">
+        <initialValue xmi:id="_bnv1tiywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1tyywEeKwVfurbTQbHw" name="categ_dpt_id_scd" label="categ_dpt_id_scd" length="10" sourceType="INT4" talendType="id_Integer">
+        <initialValue xmi:id="_bnv1uCywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1uSywEeKwVfurbTQbHw" name="categ_family_id_scd" label="categ_family_id_scd" length="10" sourceType="INT4" talendType="id_Integer">
+        <initialValue xmi:id="_bnv1uiywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1uyywEeKwVfurbTQbHw" name="categ_subfamily_id_scd" label="categ_subfamily_id_scd" length="10" sourceType="INT4" talendType="id_Integer">
+        <initialValue xmi:id="_bnv1vCywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1vSywEeKwVfurbTQbHw" name="pr" label="pr" length="131089" sourceType="NUMERIC" talendType="id_Double">
+        <initialValue xmi:id="_bnv1viywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1vyywEeKwVfurbTQbHw" name="pv" label="pv" length="131089" sourceType="NUMERIC" talendType="id_Double">
+        <initialValue xmi:id="_bnv1wCywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1wSywEeKwVfurbTQbHw" name="k" label="k" length="131089" sourceType="NUMERIC" talendType="id_Double">
+        <initialValue xmi:id="_bnv1wiywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1wyywEeKwVfurbTQbHw" name="product_uos_qty" label="product_uos_qty" length="17" precision="17" sourceType="FLOAT8" talendType="id_Double">
+        <initialValue xmi:id="_bnv1xCywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1xSywEeKwVfurbTQbHw" name="price_unit" label="price_unit" length="131089" sourceType="NUMERIC" talendType="id_Double">
+        <initialValue xmi:id="_bnv1xiywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1xyywEeKwVfurbTQbHw" name="discount" label="discount" length="131089" sourceType="NUMERIC" talendType="id_Double">
+        <initialValue xmi:id="_bnv1yCywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1ySywEeKwVfurbTQbHw" name="product_uos" label="product_uos" length="10" sourceType="INT4" talendType="id_Integer">
+        <initialValue xmi:id="_bnv1yiywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1yyywEeKwVfurbTQbHw" name="margin" label="margin" length="131089" sourceType="NUMERIC" talendType="id_Double">
+        <initialValue xmi:id="_bnv1zCywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1zSywEeKwVfurbTQbHw" name="purchase_price" label="purchase_price" length="131089" sourceType="NUMERIC" talendType="id_Double">
+        <initialValue xmi:id="_bnv1ziywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv1zyywEeKwVfurbTQbHw" name="scd_start" label="scd_start" length="13" sourceType="DATE" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_bnv10CywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv10SywEeKwVfurbTQbHw" name="scd_end" label="scd_end" length="13" sourceType="DATE" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_bnv10iywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv10yywEeKwVfurbTQbHw" name="scd_active" label="scd_active" length="1" sourceType="BOOL" talendType="id_Boolean">
+        <initialValue xmi:id="_bnv11CywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv11SywEeKwVfurbTQbHw" name="order_line_ref" label="order_line_ref" length="100" sourceType="VARCHAR" talendType="id_String">
+        <initialValue xmi:id="_bnv11iywEeKwVfurbTQbHw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bnv11yywEeKwVfurbTQbHw" name="sales_counter_id_scd" label="sales_counter_id_scd" length="10" sourceType="INT4" talendType="id_Integer">
+        <initialValue xmi:id="_bnv12CywEeKwVfurbTQbHw"/>
+      </feature>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

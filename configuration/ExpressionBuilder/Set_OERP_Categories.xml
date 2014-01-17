@@ -1,0 +1,18 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
+  <expression:EMFExpression id="null=>OutPutStreamCategories=>path_3" expression="row1.path.size() > 1 ? row1.path[0] : NULL ">
+    <variables name="row1.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.name" value="null" talendType="id_String"/>
+    <variables name="row1.path" value="null" talendType="id_List" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>OutPutStreamCategories=>path_1" expression="row1.path.size() > 1 ? (String)row1.path.get(1) : null    ">
+    <variables name="row1.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.name" value="null" talendType="id_String"/>
+    <variables name="row1.path" value="null" talendType="id_List" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>OutPutStreamCategories=>name_level_1" expression="row1.path.size() > 1 ? (String)row1.path.get(1) : null       ">
+    <variables name="row1.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.name" value="null" talendType="id_String"/>
+    <variables name="row1.path" value="null" talendType="id_List" nullable="true"/>
+  </expression:EMFExpression>
+</xmi:XMI>

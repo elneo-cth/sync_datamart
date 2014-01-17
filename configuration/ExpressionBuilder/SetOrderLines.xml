@@ -1,0 +1,201 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
+  <expression:EMFExpression id="null=>row3=>id" expression="row7.shop_id">
+    <variables name="row1.id_scd" value="0" talendType="id_Integer"/>
+    <variables name="row1.id" value="0" talendType="id_Integer"/>
+    <variables name="row1.state" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.name" value="null" talendType="id_String"/>
+    <variables name="row1.scd_start" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row1.scd_end" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row1.scd_active" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row2.id_scd" value="0" talendType="id_Integer"/>
+    <variables name="row2.id" value="0" talendType="id_Integer"/>
+    <variables name="row2.code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.name" value="null" talendType="id_String"/>
+    <variables name="row2.scd_start" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row2.scd_end" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row2.scd_active" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row3.id_scd" value="0" talendType="id_Integer"/>
+    <variables name="row3.id" value="0" talendType="id_Integer"/>
+    <variables name="row3.name" value="null" talendType="id_String"/>
+    <variables name="row3.scd_start" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row3.scd_end" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row3.scd_active" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row4.id_scd" value="0" talendType="id_Integer"/>
+    <variables name="row4.id" value="0" talendType="id_Integer"/>
+    <variables name="row4.name" value="null" talendType="id_String"/>
+    <variables name="row4.login" value="null" talendType="id_String"/>
+    <variables name="row4.email" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.scd_start" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row4.scd_end" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row4.scd_active" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row5.id_scd" value="0" talendType="id_Integer"/>
+    <variables name="row5.id" value="0" talendType="id_Integer"/>
+    <variables name="row5.code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.name" value="null" talendType="id_String"/>
+    <variables name="row5.scd_start" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row5.scd_end" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row5.scd_active" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row6.id_scd" value="0" talendType="id_Integer"/>
+    <variables name="row6.id" value="0" talendType="id_Integer"/>
+    <variables name="row6.name" value="null" talendType="id_String"/>
+    <variables name="row6.login" value="null" talendType="id_String"/>
+    <variables name="row6.email" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row6.scd_start" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row6.scd_end" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row6.scd_active" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row7.id" value="0" talendType="id_Integer"/>
+    <variables name="row7.create_uid" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.create_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row7.write_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row7.write_uid" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.origin" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.picking_policy" value="null" talendType="id_String"/>
+    <variables name="row7.order_policy" value="null" talendType="id_String"/>
+    <variables name="row7.shop_id" value="0" talendType="id_Integer"/>
+    <variables name="row7.client_order_ref" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.date_order" value="null" talendType="id_Date"/>
+    <variables name="row7.partner_id" value="0" talendType="id_Integer"/>
+    <variables name="row7.note" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.fiscal_position" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.user_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.payment_term" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.company_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.amount_tax" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row7.state" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.pricelist_id" value="0" talendType="id_Integer"/>
+    <variables name="row7.project_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.incoterm" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.partner_order_id" value="0" talendType="id_Integer"/>
+    <variables name="row7.partner_invoice_id" value="0" talendType="id_Integer"/>
+    <variables name="row7.amount_untaxed" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row7.date_confirm" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row7.amount_total" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row7.name" value="null" talendType="id_String"/>
+    <variables name="row7.partner_shipping_id" value="0" talendType="id_Integer"/>
+    <variables name="row7.shipped" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row7.invoice_quantity" value="null" talendType="id_String"/>
+    <variables name="row7.margin" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row7.carrier_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.section_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.target_invoiced_rate" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row7.target_invoiced_amount" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row7.confirmed_delivery_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row7.effective_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row7.requested_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row7.delivery_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row7.adm_verification" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row7.block_delivery" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.stop_delivery" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row7.sale_margin" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row7.shop_sale" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row7.maint_type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.maint_contact" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.is_maintenance_order" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row7.energy_state" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.energy_order" value="null" talendType="id_Boolean" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>row7=>month" expression="">
+    <variables name="O5.order_id" value="0" talendType="id_Integer"/>
+    <variables name="O5.shop_id_scd" value="0" talendType="id_Integer"/>
+    <variables name="O5.create_uid_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="O5.user_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="O5.section_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="O5.partner_id_scd" value="0" talendType="id_Integer"/>
+    <variables name="O5.date_confirm" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row7.id" value="null" talendType="id_Date"/>
+    <variables name="row7.day" value="0" talendType="id_Integer"/>
+    <variables name="row7.month" value="0" talendType="id_Integer"/>
+    <variables name="row7.year" value="0" talendType="id_Integer"/>
+    <variables name="row7.quarter" value="0" talendType="id_Integer"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>row7=>id" expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, O5.date_confirm) )  ">
+    <variables name="O5.order_id" value="0" talendType="id_Integer"/>
+    <variables name="O5.shop_id_scd" value="0" talendType="id_Integer"/>
+    <variables name="O5.create_uid_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="O5.user_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="O5.section_id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="O5.partner_id_scd" value="0" talendType="id_Integer"/>
+    <variables name="O5.date_confirm" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row7.id" value="null" talendType="id_Date"/>
+    <variables name="row7.day" value="0" talendType="id_Integer"/>
+    <variables name="row7.month" value="0" talendType="id_Integer"/>
+    <variables name="row7.year" value="0" talendType="id_Integer"/>
+    <variables name="row7.quarter" value="0" talendType="id_Integer"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>O1=>date_confirm" expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,TalendDate.formatDate(&quot;yyyy-MM-dd&quot;,row2.date_confirm))">
+    <variables name="row2.id" value="0" talendType="id_Integer"/>
+    <variables name="row2.create_uid" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.create_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row2.write_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row2.write_uid" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.origin" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.picking_policy" value="null" talendType="id_String"/>
+    <variables name="row2.order_policy" value="null" talendType="id_String"/>
+    <variables name="row2.shop_id" value="0" talendType="id_Integer"/>
+    <variables name="row2.client_order_ref" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.date_order" value="null" talendType="id_Date"/>
+    <variables name="row2.partner_id" value="0" talendType="id_Integer"/>
+    <variables name="row2.note" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.fiscal_position" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.user_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.payment_term" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.company_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.amount_tax" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.state" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.pricelist_id" value="0" talendType="id_Integer"/>
+    <variables name="row2.project_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.incoterm" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.partner_order_id" value="0" talendType="id_Integer"/>
+    <variables name="row2.partner_invoice_id" value="0" talendType="id_Integer"/>
+    <variables name="row2.amount_untaxed" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.date_confirm" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row2.amount_total" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.name" value="null" talendType="id_String"/>
+    <variables name="row2.partner_shipping_id" value="0" talendType="id_Integer"/>
+    <variables name="row2.shipped" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row2.invoice_quantity" value="null" talendType="id_String"/>
+    <variables name="row2.margin" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.carrier_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.section_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.target_invoiced_rate" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.target_invoiced_amount" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.confirmed_delivery_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row2.effective_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row2.requested_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row2.delivery_date" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row2.adm_verification" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row2.block_delivery" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.stop_delivery" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row2.sale_margin" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.shop_sale" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row2.maint_type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.maint_contact" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.is_maintenance_order" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row2.energy_state" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.energy_order" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row3.id_scd" value="0" talendType="id_Integer"/>
+    <variables name="row3.id" value="0" talendType="id_Integer"/>
+    <variables name="row3.name" value="null" talendType="id_String"/>
+    <variables name="row3.scd_start" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row3.scd_end" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row3.scd_active" value="null" talendType="id_Boolean" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>OutPutStreamFilledPartner=>section_id_scd" expression="if(row17.id_scd ==0) ? null : row17.id_scd">
+    <variables name="OutPutStreamPartner.id_scd" value="0" talendType="id_Integer"/>
+    <variables name="OutPutStreamPartner.id" value="0" talendType="id_Integer"/>
+    <variables name="OutPutStreamPartner.section_id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="OutPutStreamPartner.ref" value="null" talendType="id_String" nullable="true"/>
+    <variables name="OutPutStreamPartner.name" value="null" talendType="id_String"/>
+    <variables name="OutPutStreamPartner.scd_start" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="OutPutStreamPartner.scd_end" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="OutPutStreamPartner.scd_active" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row17.id_scd" value="0" talendType="id_Integer"/>
+    <variables name="row17.id" value="0" talendType="id_Integer"/>
+    <variables name="row17.code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row17.name" value="null" talendType="id_String"/>
+    <variables name="row17.scd_start" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row17.scd_end" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row17.scd_active" value="null" talendType="id_Boolean" nullable="true"/>
+  </expression:EMFExpression>
+</xmi:XMI>

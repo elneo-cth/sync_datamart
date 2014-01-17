@@ -1,0 +1,52 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
+  <expression:EMFExpression id="null=>row8=>id_scd" expression="(row1.date_confirm_scd ==null)?null:TalendDate.parseDate(&quot;dd-MM-yyyy&quot;,row1.date_confirm_scd )">
+    <variables name="row1.date_confirm_scd" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row1.code" value="null" talendType="id_String"/>
+    <variables name="row1.goal" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row1.cost" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row2.id_scd" value="0" talendType="id_Integer"/>
+    <variables name="row2.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.login" value="null" talendType="id_String"/>
+    <variables name="row8.id_scd" value="null" talendType="id_Date"/>
+    <variables name="row8.day" value="0" talendType="id_Integer"/>
+    <variables name="row8.month" value="0" talendType="id_Integer"/>
+    <variables name="row8.year" value="0" talendType="id_Integer"/>
+    <variables name="row8.quarter" value="0" talendType="id_Integer"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>row9=>id_scd" expression="(row3.date_confirm_scd ==null)?null:TalendDate.parseDate(&quot;dd-MM-yyyy&quot;,row3.date_confirm_scd )">
+    <variables name="row3.date_confirm_scd" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row3.code" value="null" talendType="id_String"/>
+    <variables name="row3.goal" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row3.cost" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row3.site" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row4.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row4.code" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.id_scd" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row5.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row5.name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row9.id_scd" value="null" talendType="id_Date"/>
+    <variables name="row9.day" value="0" talendType="id_Integer"/>
+    <variables name="row9.month" value="0" talendType="id_Integer"/>
+    <variables name="row9.year" value="0" talendType="id_Integer"/>
+    <variables name="row9.quarter" value="0" talendType="id_Integer"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>row10=>id_scd" expression="(row6.date_confirm_scd ==null)?null:TalendDate.parseDate(&quot;dd-MM-yyyy&quot;,row6.date_confirm_scd )">
+    <variables name="row6.date_confirm_scd" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row6.code" value="null" talendType="id_String"/>
+    <variables name="row6.goal" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row6.cost" value="null" talendType="id_Double" nullable="true"/>
+    <variables name="row7.id_scd" value="0" talendType="id_Integer"/>
+    <variables name="row7.id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.name" value="null" talendType="id_String"/>
+    <variables name="row7.scd_start" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row7.scd_end" value="null" talendType="id_Date" nullable="true"/>
+    <variables name="row7.scd_active" value="null" talendType="id_Boolean" nullable="true"/>
+    <variables name="row10.id_scd" value="null" talendType="id_Date"/>
+    <variables name="row10.day" value="0" talendType="id_Integer"/>
+    <variables name="row10.month" value="0" talendType="id_Integer"/>
+    <variables name="row10.year" value="0" talendType="id_Integer"/>
+    <variables name="row10.quarter" value="0" talendType="id_Integer"/>
+  </expression:EMFExpression>
+</xmi:XMI>
