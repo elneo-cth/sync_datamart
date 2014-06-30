@@ -109,7 +109,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="_Bp8msO3BEeGH6b2rAB-u8A - GetInvoiceLine"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="REPOSITORY"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT account_invoice_line.id as account_invoice_line_id,account_invoice_line.product_id,&#xD;&#xA;&#x9;round(CASE WHEN account_invoice.type LIKE 'out_refund' THEN 0 - quantity ELSE quantity END,&#xA; 2) AS quantity,&#xD;&#xA;&#x9;account_invoice.id as account_invoice_id, &#xD;&#xA;&#x9;CASE WHEN so IS NOT NULL THEN so.id ELSE sale_order.id END AS order_id,&#xD;&#xA;&#x9;round(account_invoice_line.price_unit,2) AS price_unit,&#xD;&#xA;&#x9;round(account_invoice_line.discount,2) AS discount,&#xD;&#xA;&#x9;round(product_product.cost_price::numeric,2) as purchase_price,&#xD;&#xA;&#x9;CASE WHEN account_invoice.type LIKE 'out_refund' THEN&#xD;&#xA;&#x9;&#x9;round(0 - ((account_invoice_line.quantity * account_invoice_line.price_unit::double precision * &#xA; ((100::numeric - account_invoice_line.discount) / 100::numeric)::double precision)::numeric -&#xD;&#xA;&#x9;&#x9;CASE WHEN (p0.id=9874 or p0.id=9875) THEN 0 ELSE (account_invoice_line.quantity * CASE WHEN &#xA; account_invoice_line.cost_price IS NOT NULL THEN account_invoice_line.cost_price ELSE CASE WHEN &#xA; sale_order_line.purchase_price IS NOT NULL THEN sale_order_line.purchase_price ELSE 0 END &#xA; END)::numeric END),2)&#xD;&#xA;&#x9;ELSE&#xD;&#xA;&#x9;&#x9;round(((account_invoice_line.quantity * account_invoice_line.price_unit::double precision * &#xA; ((100::numeric - account_invoice_line.discount) / 100::numeric)::double precision)::numeric -&#xD;&#xA;&#x9;&#x9;CASE WHEN (p0.id=9874 or p0.id=9875) THEN 0 ELSE (account_invoice_line.quantity * CASE WHEN &#xA; account_invoice_line.cost_price IS NOT NULL THEN account_invoice_line.cost_price ELSE CASE WHEN &#xA; sale_order_line.purchase_price IS NOT NULL THEN sale_order_line.purchase_price ELSE 0 END &#xA; END)::numeric END),2)&#xD;&#xA;&#x9;END as margin,&#xD;&#xA;&#x9;CASE WHEN account_invoice.type LIKE 'out_refund' THEN&#xD;&#xA;&#x9;&#x9;round(0 - ((account_invoice_line.quantity * account_invoice_line.price_unit::double precision * &#xA; ((100::numeric - account_invoice_line.discount) / 100::numeric)::double precision)::numeric -&#xD;&#xA;&#x9;&#x9;(account_invoice_line.quantity * CASE WHEN account_invoice_line.cost_price IS NOT NULL THEN &#xA; account_invoice_line.cost_price ELSE CASE WHEN sale_order_line.purchase_price IS NOT NULL THEN &#xA; sale_order_line.purchase_price ELSE 0 END END)::numeric),2)&#xD;&#xA;&#x9;ELSE&#xD;&#xA;&#x9;&#x9;round(((account_invoice_line.quantity * account_invoice_line.price_unit::double precision * &#xA; ((100::numeric - account_invoice_line.discount) / 100::numeric)::double precision)::numeric -&#xD;&#xA;&#x9;&#x9;(account_invoice_line.quantity * CASE WHEN account_invoice_line.cost_price IS NOT NULL THEN &#xA; account_invoice_line.cost_price ELSE CASE WHEN sale_order_line.purchase_price IS NOT NULL THEN &#xA; sale_order_line.purchase_price ELSE 0 END END)::numeric),2)&#xD;&#xA;&#x9;END AS margin_with_services,&#xD;&#xA;&#x9;1 as number_of_lines,&#xD;&#xA;&#x9;CASE WHEN account_invoice.type LIKE 'out_refund' THEN &#xD;&#xA;&#x9;&#x9;round(0 - (account_invoice_line.quantity * account_invoice_line.price_unit::double precision * &#xA; ((100::numeric - account_invoice_line.discount) / 100::numeric)::double precision)::numeric, 2) &#xD;&#xA;&#x9;ELSE &#xD;&#xA;&#x9;&#x9;round((account_invoice_line.quantity * account_invoice_line.price_unit::double precision * &#xA; ((100::numeric - account_invoice_line.discount) / 100::numeric)::double precision)::numeric,&#xA;  2) END as pv,&#xD;&#xA;&#x9;CASE WHEN (p0.id=9874 or p0.id=9875)  THEN 0::numeric ELSE &#xD;&#xA;&#x9;&#x9;CASE WHEN account_invoice.type LIKE 'out_refund' THEN &#xD;&#xA;&#x9;&#x9;&#x9;round(0 - (account_invoice_line.quantity * CASE WHEN account_invoice_line.cost_price IS NOT &#xA; NULL THEN account_invoice_line.cost_price ELSE sale_order_line.purchase_price END)::numeric, 2) &#xD;&#xA;&#x9;&#x9;ELSE &#xD;&#xA;&#x9;&#x9;&#x9;round((account_invoice_line.quantity * CASE WHEN account_invoice_line.cost_price IS NOT NULL &#xA; THEN account_invoice_line.cost_price ELSE CASE WHEN sale_order_line.purchase_price IS NOT NULL THEN &#xA; sale_order_line.purchase_price ELSE 0 END END)::numeric, 2) END &#xD;&#xA;&#x9;END as pr,&#xD;&#xA;&#x9;CASE WHEN (account_invoice_line.quantity * product_product.cost_price::double precision) = &#xA; 0::double precision THEN 0::numeric ELSE round(((account_invoice_line.quantity * &#xA; account_invoice_line.price_unit::double precision * ((100::numeric - account_invoice_line.discount) &#xA; / 100::numeric)::double precision) / (account_invoice_line.quantity *  &#xA; product_product.cost_price::double precision))::numeric,2) END AS k,&#xD;&#xA;&#x9;UPPER(CASE WHEN sale_order.partner_id = 5031 AND (crm_case_section.code LIKE 'COMP%') THEN &#xA; 'WMY'::character varying ELSE usr_rep.login END) AS representant,&#xD;&#xA;&#x9;CASE WHEN sale_order.section_id IS NOT NULL THEN sale_order.section_id ELSE &#xA; usr_rep.context_section_id END AS section_id,&#xD;&#xA;&#x9;sale_order_line_invoice_rel.order_line_id,&#xD;&#xA;&#x9;account_invoice.type,&#xD;&#xA;&#x9;country.code||'_'||trim(address.zip) as zip,&#xD;&#xA;&#x9;CASE WHEN (CASE WHEN sale_order.section_id IS NOT NULL THEN sale_order.section_id ELSE &#xA; usr_rep.context_section_id END in (9,10,&#xA; 11)) AND account_invoice.date_invoice is not null or sale_order.date_confirm is null&#xD;&#xA;&#x9;THEN  account_invoice.date_invoice ELSE sale_order.date_confirm   END as date_confirm,&#xD;&#xA;&#x9;CASE WHEN section.code LIKE 'MAIN%' OR usr_rep.shop_id is null THEN sale_order.shop_id ELSE &#xA; usr_rep.shop_id END AS shop_id,&#xD;&#xA;&#x9;CASE WHEN ignored_for_stat is null THEN false ELSE ignored_for_stat END AS ignored_for_stat,&#xD;&#xA;&#x9;CASE WHEN sale_order.is_quotation IS NOT NULL THEN sale_order.is_quotation ELSE false END as &#xA; is_quotation,&#xD;&#xA;&#x9;account_invoice_line.state as state,&#xD;&#xA;&#x9;CASE WHEN sale_order.create_uid IS NOT NULL THEN sale_order.create_uid ELSE &#xA; account_invoice.create_uid END AS create_uid,&#xD;&#xA;&#x9;to_char(CASE WHEN sale_order.create_date IS NOT NULL THEN sale_order.create_date ELSE &#xA; account_invoice.create_date END, 'yyyy-MM-dd') AS create_date,&#xD;&#xA;&#x9;CASE WHEN p0.prime_compressors THEN&#xD;&#xA;&#x9;&#x9;CASE WHEN account_invoice.type LIKE 'out_refund' THEN &#xD;&#xA;&#x9;&#x9;&#x9;round(0 - (account_invoice_line.quantity * account_invoice_line.price_unit::double precision * &#xA; ((100::numeric - account_invoice_line.discount) / 100::numeric)::double precision)::numeric, 2) &#xD;&#xA;&#x9;&#x9;ELSE &#xD;&#xA;&#x9;&#x9;&#x9;round((account_invoice_line.quantity * account_invoice_line.price_unit::double precision * &#xA; ((100::numeric - account_invoice_line.discount) / 100::numeric)::double precision)::numeric, 2) END&#xD;&#xA;&#x9;ELSE 0 END as result_prime,&#xD;&#xA;&#x9;0 as result_prime_bonus&#xD;&#xA;FROM account_invoice_line&#xD;&#xA;LEFT JOIN sale_order_line_invoice_rel &#xD;&#xA;                LEFT JOIN sale_order_line  &#xD;&#xA;&#x9;&#x9;&#x9;LEFT JOIN sale_order so on so.id = sale_order_line.order_id&#xD;&#xA;                ON sale_order_line_invoice_rel.order_line_id=sale_order_line.id&#xD;&#xA;ON sale_order_line_invoice_rel.invoice_id =account_invoice_line.id&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;LEFT JOIN account_invoice &#xD;&#xA;&#x9;LEFT JOIN (select invoice_id,&#xA;  MIN(order_id) as order_id from sale_order_invoice_rel group by invoice_id) as &#xA; sale_order_invoice_rel&#xD;&#xA;&#x9;&#x9;LEFT JOIN sale_order &#xD;&#xA;&#x9;&#x9;&#x9;LEFT JOIN crm_case_section section ON sale_order.section_id=section.id&#xD;&#xA;&#x9;&#x9;&#x9;LEFT JOIN res_users usr_rep&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;LEFT JOIN crm_case_section ON usr_rep.context_section_id = crm_case_section.id   &#xD;&#xA;&#x9;&#x9;&#x9;ON sale_order.user_id = usr_rep.id&#xD;&#xA;&#x9;&#x9;on sale_order_invoice_rel.order_id = sale_order.id&#xD;&#xA;&#x9;ON sale_order_invoice_rel.invoice_id = account_invoice.id&#xD;&#xA;ON account_invoice_line.invoice_id = account_invoice.id&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;LEFT JOIN (product_product &#xD;&#xA;&#x9;LEFT JOIN (product_template &#xD;&#xA;&#x9;&#x9;LEFT JOIN product_category p0 ON p0.id = product_template.categ_id) &#xD;&#xA;&#x9;ON product_product.product_tmpl_id = product_template.id) &#xD;&#xA;ON account_invoice_line.product_id = product_product.id&#xD;&#xA;LEFT JOIN res_partner_address  address &#xD;&#xA;&#x9;LEFT JOIN res_country country on address.country_id =country.id&#xD;&#xA;on address.id=sale_order.partner_shipping_id &#xD;&#xA;WHERE p0.id !=9881 AND account_invoice.state::text &lt;> 'cancel'::text AND &#xD;&#xA;(account_invoice.state &lt;> 'draft' or (sale_order.section_id in(9,10,&#xA; 11) and account_invoice.state = 'draft'))&#xD;&#xA;AND  (account_invoice.type LIKE 'out_invoice' OR account_invoice.type LIKE 'out_refund')&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT account_invoice_line.id as account_invoice_line_id,account_invoice_line.product_id,&#xA;&#x9;round(CASE WHEN account_invoice.type LIKE 'out_refund' THEN 0 - quantity ELSE quantity END,&#xA; 2) AS quantity,&#xA;&#x9;account_invoice.id as account_invoice_id, &#xA;&#x9;CASE WHEN so.id IS NOT NULL THEN so.id ELSE sale_order.id END AS order_id,&#xA;&#x9;round(account_invoice_line.price_unit,2) AS price_unit,&#xA;&#x9;round(account_invoice_line.discount,2) AS discount,&#xA;&#x9;round(product_product.cost_price::numeric,2) as purchase_price,&#xA;&#x9;CASE WHEN account_invoice.type LIKE 'out_refund' THEN&#xA;&#x9;&#x9;round(0 - ((account_invoice_line.quantity * account_invoice_line.price_unit::double precision * &#xA; ((100::numeric - account_invoice_line.discount) / 100::numeric)::double precision)::numeric -&#xA;&#x9;&#x9;CASE WHEN (p0.id=9874 or p0.id=9875) THEN 0 ELSE (account_invoice_line.quantity * CASE WHEN &#xA; account_invoice_line.cost_price IS NOT NULL THEN account_invoice_line.cost_price ELSE CASE WHEN &#xA; sale_order_line.purchase_price IS NOT NULL THEN sale_order_line.purchase_price ELSE 0 END &#xA; END)::numeric END),2)&#xA;&#x9;ELSE&#xA;&#x9;&#x9;round(((account_invoice_line.quantity * account_invoice_line.price_unit::double precision * &#xA; ((100::numeric - account_invoice_line.discount) / 100::numeric)::double precision)::numeric -&#xA;&#x9;&#x9;CASE WHEN (p0.id=9874 or p0.id=9875) THEN 0 ELSE (account_invoice_line.quantity * CASE WHEN &#xA; account_invoice_line.cost_price IS NOT NULL THEN account_invoice_line.cost_price ELSE CASE WHEN &#xA; sale_order_line.purchase_price IS NOT NULL THEN sale_order_line.purchase_price ELSE 0 END &#xA; END)::numeric END),2)&#xA;&#x9;END as margin,&#xA;&#x9;CASE WHEN account_invoice.type LIKE 'out_refund' THEN&#xA;&#x9;&#x9;round(0 - ((account_invoice_line.quantity * account_invoice_line.price_unit::double precision * &#xA; ((100::numeric - account_invoice_line.discount) / 100::numeric)::double precision)::numeric -&#xA;&#x9;&#x9;(account_invoice_line.quantity * CASE WHEN account_invoice_line.cost_price IS NOT NULL THEN &#xA; account_invoice_line.cost_price ELSE CASE WHEN sale_order_line.purchase_price IS NOT NULL THEN &#xA; sale_order_line.purchase_price ELSE 0 END END)::numeric),2)&#xA;&#x9;ELSE&#xA;&#x9;&#x9;round(((account_invoice_line.quantity * account_invoice_line.price_unit::double precision * &#xA; ((100::numeric - account_invoice_line.discount) / 100::numeric)::double precision)::numeric -&#xA;&#x9;&#x9;(account_invoice_line.quantity * CASE WHEN account_invoice_line.cost_price IS NOT NULL THEN &#xA; account_invoice_line.cost_price ELSE CASE WHEN sale_order_line.purchase_price IS NOT NULL THEN &#xA; sale_order_line.purchase_price ELSE 0 END END)::numeric),2)&#xA;&#x9;END AS margin_with_services,&#xA;&#x9;1 as number_of_lines,&#xA;&#x9;CASE WHEN account_invoice.type LIKE 'out_refund' THEN &#xA;&#x9;&#x9;round(0 - (account_invoice_line.quantity * account_invoice_line.price_unit::double precision * &#xA; ((100::numeric - account_invoice_line.discount) / 100::numeric)::double precision)::numeric, 2) &#xA;&#x9;ELSE &#xA;&#x9;&#x9;round((account_invoice_line.quantity * account_invoice_line.price_unit::double precision * &#xA; ((100::numeric - account_invoice_line.discount) / 100::numeric)::double precision)::numeric,&#xA;  2) END as pv,&#xA;&#x9;CASE WHEN (p0.id=9874 or p0.id=9875)  THEN 0::numeric ELSE &#xA;&#x9;&#x9;CASE WHEN account_invoice.type LIKE 'out_refund' THEN &#xA;&#x9;&#x9;&#x9;round(0 - (account_invoice_line.quantity * CASE WHEN account_invoice_line.cost_price IS NOT &#xA; NULL THEN account_invoice_line.cost_price ELSE sale_order_line.purchase_price END)::numeric, 2) &#xA;&#x9;&#x9;ELSE &#xA;&#x9;&#x9;&#x9;round((account_invoice_line.quantity * CASE WHEN account_invoice_line.cost_price IS NOT NULL &#xA; THEN account_invoice_line.cost_price ELSE CASE WHEN sale_order_line.purchase_price IS NOT NULL &#xA; THEN &#xA; sale_order_line.purchase_price ELSE 0 END END)::numeric, 2) END &#xA;&#x9;END as pr,&#xA;&#x9;CASE WHEN (account_invoice_line.quantity * product_product.cost_price::double precision) = &#xA; 0::double precision THEN 0::numeric ELSE round(((account_invoice_line.quantity * &#xA; account_invoice_line.price_unit::double precision * ((100::numeric - &#xA; account_invoice_line.discount) &#xA; / 100::numeric)::double precision) / (account_invoice_line.quantity *  &#xA; product_product.cost_price::double precision))::numeric,2) END AS k,&#xA;&#x9;UPPER(CASE WHEN sale_order.partner_id = 5031 AND (crm_case_section.code LIKE 'COMP%') THEN &#xA; 'WMY'::character varying ELSE usr_rep.login END) AS representant,&#xA;&#x9;CASE WHEN sale_order.section_id IS NOT NULL THEN sale_order.section_id ELSE &#xA; usr_rep.context_section_id END AS section_id,&#xA;&#x9;sale_order_line_invoice_rel.order_line_id,&#xA;&#x9;account_invoice.type,&#xA;&#x9;country.code||'_'||trim(address.zip) as zip,&#xA;&#xA;&#xA;CASE &#xA;WHEN account_invoice.date_invoice is null&#xA;&#x9;THEN CASE WHEN so.date_confirm is null THEN sale_order.date_confirm ELSE so.date_confirm END&#xA;WHEN so.date_confirm is null and sale_order.date_confirm is null&#xA;&#x9;THEN account_invoice.date_invoice&#xA;WHEN (CASE WHEN sale_order.section_id IS NOT NULL THEN sale_order.section_id ELSE &#xA; usr_rep.context_section_id END in (9,10,11))&#xA;&#x9;THEN account_invoice.date_invoice&#xA;WHEN so.date_confirm is not null and (so.stat_on_invoice_date is not null and &#xA; so.stat_on_invoice_date)&#xA;&#x9;THEN account_invoice.date_invoice&#xA;WHEN so.date_confirm is not null and (so.stat_on_invoice_date is null or not &#xA; so.stat_on_invoice_date)&#xA;&#x9;THEN so.date_confirm&#xA;WHEN sale_order.date_confirm is not null and (sale_order.stat_on_invoice_date is not null and &#xA; sale_order.stat_on_invoice_date)&#xA;&#x9;THEN account_invoice.date_invoice&#xA;WHEN sale_order.date_confirm is not null and (sale_order.stat_on_invoice_date is null or not &#xA; sale_order.stat_on_invoice_date)&#xA;&#x9;THEN sale_order.date_confirm&#xA;END as date_confirm, &#xA;&#xA;&#x9;CASE WHEN section.code LIKE 'MAIN%' OR usr_rep.shop_id is null THEN sale_order.shop_id ELSE &#xA; usr_rep.shop_id END AS shop_id,&#xA;&#x9;CASE WHEN ignored_for_stat is null THEN false ELSE ignored_for_stat END AS ignored_for_stat,&#xA;&#x9;CASE WHEN sale_order.is_quotation IS NOT NULL THEN sale_order.is_quotation ELSE false END as &#xA; is_quotation,&#xA;&#x9;account_invoice_line.state as state,&#xA;&#x9;CASE WHEN sale_order.create_uid IS NOT NULL THEN sale_order.create_uid ELSE &#xA; account_invoice.create_uid END AS create_uid,&#xA;&#x9;to_char(CASE WHEN sale_order.create_date IS NOT NULL THEN sale_order.create_date ELSE &#xA; account_invoice.create_date END, 'yyyy-MM-dd') AS create_date,&#xA;&#x9;CASE WHEN p0.prime_compressors THEN&#xA;&#x9;&#x9;CASE WHEN account_invoice.type LIKE 'out_refund' THEN &#xA;&#x9;&#x9;&#x9;round(0 - (account_invoice_line.quantity * account_invoice_line.price_unit::double precision * &#xA; ((100::numeric - account_invoice_line.discount) / 100::numeric)::double precision)::numeric, 2) &#xA;&#x9;&#x9;ELSE &#xA;&#x9;&#x9;&#x9;round((account_invoice_line.quantity * account_invoice_line.price_unit::double precision * &#xA; ((100::numeric - account_invoice_line.discount) / 100::numeric)::double precision)::numeric,&#xA;  2) END&#xA;&#x9;ELSE 0 END as result_prime,&#xA;&#x9;0 as result_prime_bonus, so.stat_on_invoice_date&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;&#xA;FROM account_invoice_line&#xA;LEFT JOIN sale_order_line_invoice_rel &#xA;                LEFT JOIN sale_order_line  &#xA;&#x9;&#x9;&#x9;LEFT JOIN sale_order so on so.id = sale_order_line.order_id&#xA;                ON sale_order_line_invoice_rel.order_line_id=sale_order_line.id&#xA;ON sale_order_line_invoice_rel.invoice_id =account_invoice_line.id&#xA;&#xA;&#xA;LEFT JOIN account_invoice &#xA;&#x9;LEFT JOIN (select invoice_id,&#xA;  MIN(order_id) as order_id from sale_order_invoice_rel group by invoice_id) as &#xA; sale_order_invoice_rel&#xA;&#x9;&#x9;LEFT JOIN sale_order &#xA;&#x9;&#x9;&#x9;LEFT JOIN crm_case_section section ON sale_order.section_id=section.id&#xA;&#x9;&#x9;&#x9;LEFT JOIN res_users usr_rep&#xA;&#x9;&#x9;&#x9;&#x9;LEFT JOIN crm_case_section ON usr_rep.context_section_id = crm_case_section.id   &#xA;&#x9;&#x9;&#x9;ON sale_order.user_id = usr_rep.id&#xA;&#x9;&#x9;on sale_order_invoice_rel.order_id = sale_order.id&#xA;&#x9;ON sale_order_invoice_rel.invoice_id = account_invoice.id&#xA;ON account_invoice_line.invoice_id = account_invoice.id&#xA;&#xA;&#xA;LEFT JOIN (product_product &#xA;&#x9;LEFT JOIN (product_template &#xA;&#x9;&#x9;LEFT JOIN product_category p0 ON p0.id = product_template.categ_id) &#xA;&#x9;ON product_product.product_tmpl_id = product_template.id) &#xA;ON account_invoice_line.product_id = product_product.id&#xA;LEFT JOIN res_partner_address  address &#xA;&#x9;LEFT JOIN res_country country on address.country_id =country.id&#xA;on address.id=sale_order.partner_shipping_id &#xA;WHERE p0.id !=9881 AND account_invoice.state::text &lt;> 'cancel'::text AND &#xA;(account_invoice.state &lt;> 'draft' or (sale_order.section_id in(9,10,&#xA; 11) and account_invoice.state = 'draft'))&#xA;AND  (account_invoice.type LIKE 'out_invoice' OR account_invoice.type LIKE 'out_refund')&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
@@ -173,6 +173,8 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="result_prime_bonus"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stat_on_invoice_date"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="GetInvoiceLine"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -210,6 +212,7 @@
       <column comment="" key="false" length="13" name="create_date" nullable="true" pattern="&quot;'yyyy-MM-dd&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="result_prime" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="result_prime_bonus" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" name="stat_on_invoice_date" nullable="true" pattern="" sourceType="BOOL" type="id_Boolean" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tIntervalMatch" componentVersion="0.103" offsetLabelX="0" offsetLabelY="0" posX="992" posY="608">
@@ -255,6 +258,7 @@
       <column comment="" key="false" length="13" name="create_date" nullable="true" pattern="&quot;'yyyy-MM-dd&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="result_prime" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="result_prime_bonus" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" name="stat_on_invoice_date" nullable="true" pattern="" sourceType="BOOL" type="id_Boolean" usefulColumn="true"/>
       <column key="false" length="10" name="LOOKUP" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="10" usefulColumn="true"/>
     </metadata>
   </node>
@@ -427,9 +431,10 @@
       <column comment="" key="false" name="origin_id_scd" nullable="true" pattern="" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="result_prime" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="result_prime_bonus" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="stat_on_invoice_date" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="OutPutInvoiceLine_OERP">
         <mapperTableEntries name="id" expression="OutPutInvoiceLine.account_invoice_line_id " type="id_Integer" nullable="true"/>
@@ -476,6 +481,7 @@
         <mapperTableEntries name="origin_id_scd" expression="OutPutFilledInvoices.origin_id_scd " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="result_prime" expression="OutPutInvoiceLine.result_prime " type="id_Double" nullable="true"/>
         <mapperTableEntries name="result_prime_bonus" expression="OutPutInvoiceLine.result_prime_bonus " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="stat_on_invoice_date" expression="OutPutInvoiceLine.stat_on_invoice_date " type="id_Boolean" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="OutPutInvoiceLine" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="account_invoice_line_id" type="id_Integer"/>
@@ -506,6 +512,7 @@
         <mapperTableEntries name="create_date" type="id_Date" nullable="true"/>
         <mapperTableEntries name="result_prime" type="id_Double" nullable="true"/>
         <mapperTableEntries name="result_prime_bonus" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="stat_on_invoice_date" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="LOOKUP" type="id_Integer" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="OutPutFilledProducts" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
@@ -1354,7 +1361,7 @@
     <elementParameter field="CHECK" name="USE_SAVE_MEM_MODE" value="false"/>
     <elementParameter field="CHECK" name="SOURCE_KEY_INC_NULL" value="false"/>
     <elementParameter field="CHECK" name="USE_L0" value="false"/>
-    <elementParameter field="TABLE" name="L0_FIELDS" value=""/>
+    <elementParameter field="TABLE" name="L0_FIELDS"/>
     <elementParameter field="CHECK" name="USE_L1" value="true"/>
     <elementParameter field="TABLE" name="L1_FIELDS">
       <elementValue elementRef="NAME" value="create_date"/>
@@ -1404,6 +1411,7 @@
       <elementValue elementRef="NAME" value="origin_id_scd"/>
       <elementValue elementRef="NAME" value="result_prime"/>
       <elementValue elementRef="NAME" value="result_prime_bonus"/>
+      <elementValue elementRef="NAME" value="stat_on_invoice_date"/>
     </elementParameter>
     <elementParameter field="COLUMN_LIST" name="L2_STARTDATE_FIELD" value="scd_start"/>
     <elementParameter field="CLOSED_LIST" name="L2_STARTDATE_VALUE" value="JOB_START_TIME"/>
@@ -1507,6 +1515,7 @@
       <column key="false" length="10" name="shop_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="Column generated by scd editor." defaultValue="" key="false" length="1" name="stat_on_invoice_date" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
       <column comment="Order State" key="false" length="16" name="state" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column key="false" length="10" name="supplier_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
@@ -1522,96 +1531,96 @@
       <column comment="" defaultValue="" key="false" length="10" name="zone_id_scd" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="fact_sale_order_line" name="REJECT">
-      <column comment="" defaultValue="" key="false" length="10" name="id" nullable="true" pattern="" precision="0" sourceType="serial" type="id_Integer" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="10" name="sale_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="10" name="user_create_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="10" name="section_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="10" name="user_rep_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="10" name="shop_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="10" name="customer_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="13" name="date_confirm_scd" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="10" name="product_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="10" name="supplier_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
+      <column comment="" defaultValue="" key="false" length="10" name="address_id_scd" nullable="true" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true"/>
       <column key="false" length="10" name="categ_dpt_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column key="false" length="10" name="categ_family_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" defaultValue="" key="false" length="10" name="categ_group_id_scd" nullable="true" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true"/>
       <column key="false" length="10" name="categ_subfamily_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" name="pr" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="13" name="create_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column key="false" length="10" name="customer_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" name="pv" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" name="k" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" name="product_uos_qty" nullable="true" pattern="" precision="0" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" name="price_unit" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
+      <column key="false" length="13" name="date_confirm_scd" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column key="false" name="discount" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="10" name="product_uos" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+      <column comment="" defaultValue="" key="false" length="10" name="fact_sale_id_scd" nullable="true" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="fully_invoiced" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="fully_payed" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="fully_shipped" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="id" nullable="true" pattern="" precision="0" sourceType="serial" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="ignored_for_stat" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="invoice_id_scd" nullable="true" pattern="" precision="0" sourceType="serial" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="is_quotation" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="is_sale_counter" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      <column key="false" name="k" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column key="false" name="margin" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" defaultValue="" key="false" name="margin_with_services" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" originalLength="131089" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="number_of_lines" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" name="origin_id_scd" nullable="true" pattern="" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column key="false" name="pr" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" name="price_unit" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="10" name="product_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="10" name="product_uos" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" name="product_uos_qty" nullable="true" pattern="" precision="0" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column key="false" name="purchase_price" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="1" name="scd_remove" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
+      <column key="false" name="pv" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column key="true" length="100" name="ref" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" name="type" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="type_id_scd" nullable="true" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="fact_sale_id_scd" nullable="true" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="invoice_id_scd" nullable="true" pattern="" precision="0" sourceType="serial" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="zone_id_scd" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="address_id_scd" nullable="true" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="margin_with_services" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" originalLength="131089" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="number_of_lines" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="categ_group_id_scd" nullable="true" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="fully_payed" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="fully_invoiced" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="is_sale_counter" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="fully_shipped" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="ignored_for_stat" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="is_quotation" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
-      <column comment="Order State" key="false" length="16" name="state" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="13" name="create_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" name="origin_id_scd" nullable="true" pattern="" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="result_prime" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="result_prime_bonus" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="10" name="sale_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="1" name="scd_remove" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="10" name="section_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="10" name="shop_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="Order State" key="false" length="16" name="state" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="10" name="supplier_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" name="type" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="type_id_scd" nullable="true" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true"/>
+      <column key="false" length="10" name="user_create_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="10" name="user_rep_id_scd" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="10" name="zone_id_scd" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -2351,6 +2360,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="result_prime_bonus"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="stat_on_invoice_date"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
@@ -2616,6 +2628,9 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="result_prime_bonus"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="stat_on_invoice_date"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>

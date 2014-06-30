@@ -2,8 +2,8 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
-    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
-    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms4000M -Xmx5000M "/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="true"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
     <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
@@ -73,7 +73,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="_mRTakO3AEeGH6b2rAB-u8A - GetAllByProduct"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="REPOSITORY"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT fact_invoice.id_scd, fact_invoice.id, fact_invoice.ref, &#xD;&#xA;&#x9;fact_invoice.type, fact_invoice.sale_id_scd, fact_invoice.user_create_id_scd, &#xD;&#xA;&#x9;fact_invoice.section_id_scd, fact_invoice.user_rep_id_scd, fact_invoice.shop_id_scd, &#xD;&#xA;&#x9;fact_invoice.customer_id_scd, fact_invoice.date_confirm_scd, fact_invoice.product_id_scd, &#xD;&#xA;&#x9;fact_invoice.supplier_id_scd, fact_invoice.categ_dpt_id_scd,fact_invoice.categ_group_id_scd,&#xA;  fact_invoice.categ_family_id_scd, &#xD;&#xA;&#x9;fact_invoice.categ_subfamily_id_scd,round(fact_invoice.pr,2) as pr, round(fact_invoice.pv,&#xA; 2) as pv, round(fact_invoice.k,2) as k, &#xD;&#xA;&#x9;round(fact_invoice.product_uos_qty::numeric,2) as product_uos_qty, round(fact_invoice.price_unit,&#xA; 2) as price_unit, round(fact_invoice.discount,2) as discount, &#xD;&#xA;&#x9;round(fact_invoice.product_uos,2) as product_uos, round(fact_invoice.margin,2) as margin,&#xD;&#xA;&#x9;round(fact_invoice.margin_with_services,2) as margin_with_services,fact_invoice.number_of_lines,&#xA;  round(fact_invoice.purchase_price,2) as purchase_price, &#xD;&#xA;&#x9;fact_invoice.scd_start, fact_invoice.scd_end, fact_invoice.scd_active, &#xD;&#xA;&#x9;fact_invoice.scd_remove, fact_invoice.invoice_id_scd, fact_invoice.zone_id_scd,&#xA;  fact_invoice.address_id_scd,&#xD;&#xA;&#x9;fact_invoice.fully_payed, fact_invoice.fully_shipped, fact_invoice.fully_invoiced,&#xA; fact_invoice.is_sale_counter,&#xD;&#xA;&#x9;fact_invoice.is_quotation, fact_invoice.origin_id_scd,fact_invoice.result_prime,&#xA; fact_invoice.result_prime_bonus&#xD;&#xA;FROM fact_invoice&#xD;&#xA;LEFT JOIN dim_section ON dim_section.id_scd = fact_invoice.section_id_scd&#xD;&#xA;LEFT JOIN dim_sale ON dim_sale.id_scd = fact_invoice.sale_id_scd&#xD;&#xA;LEFT JOIN dim_invoice ON dim_invoice.id_scd = fact_invoice.invoice_id_scd&#xD;&#xA;WHERE fact_invoice.scd_active = true AND fact_invoice.scd_remove = false AND &#xD;&#xA;fact_invoice.scd_start IS NOT NULL AND (fully_invoiced = true OR (dim_section.id = ANY (ARRAY[9,&#xA;  10, 11])))&#xD;&#xA;AND (ignored_for_stat is null or ignored_for_stat=false)&#xD;&#xA;&#xD;&#xA;UNION &#xD;&#xA;&#xD;&#xA;SELECT fact_sale.id_scd, fact_sale.id, 'OERP_S_'||fact_sale.id AS ref, &#xD;&#xA;&#x9;fact_sale.type, fact_sale.sale_id_scd, fact_sale.user_create_id_scd, &#xD;&#xA;&#x9;fact_sale.section_id_scd, fact_sale.user_rep_id_scd, fact_sale.shop_id_scd, &#xD;&#xA;&#x9;fact_sale.customer_id_scd, fact_sale.date_confirm_scd, fact_sale.product_id_scd,&#xD;&#xA;&#x9;fact_sale.supplier_id_scd, fact_sale.categ_dpt_id_scd, fact_sale.categ_group_id_scd,&#xA; fact_sale.categ_family_id_scd, &#xD;&#xA;&#x9;fact_sale.categ_subfamily_id_scd, fact_sale.pr, fact_sale.pv, fact_sale.k, &#xD;&#xA;&#x9;fact_sale.product_uos_qty, fact_sale.price_unit, fact_sale.discount, &#xD;&#xA;&#x9;fact_sale.product_uos, fact_sale.margin, fact_sale.margin_with_services,fact_sale.number_of_lines,&#xA; fact_sale.purchase_price, &#xD;&#xA;&#x9;fact_sale.scd_start, fact_sale.scd_end, fact_sale.scd_active, &#xD;&#xA;&#x9;fact_sale.scd_remove, NULL::integer AS invoice_id_scd, fact_sale.zone_id_scd,&#xA;  fact_sale.address_id_scd,&#xD;&#xA;&#x9;fact_sale.fully_payed, fact_sale.fully_shipped, fact_sale.fully_invoiced,&#xA; fact_sale.is_sale_counter,&#xD;&#xA;&#x9;fact_sale.is_quotation, fact_sale.origin_id_scd,fact_sale.result_prime,&#xA; fact_sale.result_prime_bonus&#xD;&#xA;FROM fact_sale&#xD;&#xA;LEFT JOIN dim_sale ON dim_sale.id_scd = fact_sale.sale_id_scd&#xD;&#xA;LEFT JOIN dim_section ON dim_section.id_scd = fact_sale.section_id_scd&#xD;&#xA;WHERE fully_invoiced = false AND fact_sale.scd_active = true &#xD;&#xA;AND fact_sale.state != 'draft' AND dim_sale.state != 'draft'&#xD;&#xA;AND fact_sale.scd_remove = false AND fact_sale.scd_start IS NOT NULL AND (dim_section.id &lt;> ALL &#xA; (ARRAY[9, 10, 11]))&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT fact_invoice.id_scd, fact_invoice.id, fact_invoice.ref, &#xD;&#xA;&#x9;fact_invoice.type, fact_invoice.sale_id_scd, fact_invoice.user_create_id_scd, &#xD;&#xA;&#x9;fact_invoice.section_id_scd, fact_invoice.user_rep_id_scd, fact_invoice.shop_id_scd, &#xD;&#xA;&#x9;fact_invoice.customer_id_scd, fact_invoice.date_confirm_scd, fact_invoice.product_id_scd, &#xD;&#xA;&#x9;fact_invoice.supplier_id_scd, fact_invoice.categ_dpt_id_scd,fact_invoice.categ_group_id_scd,&#xA;  fact_invoice.categ_family_id_scd, &#xD;&#xA;&#x9;fact_invoice.categ_subfamily_id_scd,round(fact_invoice.pr,2) as pr, round(fact_invoice.pv,&#xA; 2) as pv, round(fact_invoice.k,2) as k, &#xD;&#xA;&#x9;round(fact_invoice.product_uos_qty::numeric,2) as product_uos_qty, round(fact_invoice.price_unit,&#xA; 2) as price_unit, round(fact_invoice.discount,2) as discount, &#xD;&#xA;&#x9;round(fact_invoice.product_uos,2) as product_uos, round(fact_invoice.margin,2) as margin,&#xD;&#xA;&#x9;round(fact_invoice.margin_with_services,2) as margin_with_services,fact_invoice.number_of_lines,&#xA;  round(fact_invoice.purchase_price,2) as purchase_price, &#xD;&#xA;&#x9;fact_invoice.scd_start, fact_invoice.scd_end, fact_invoice.scd_active, &#xD;&#xA;&#x9;fact_invoice.scd_remove, fact_invoice.invoice_id_scd, fact_invoice.zone_id_scd,&#xA;  fact_invoice.address_id_scd,&#xD;&#xA;&#x9;fact_invoice.fully_payed, fact_invoice.fully_shipped, fact_invoice.fully_invoiced,&#xA; fact_invoice.is_sale_counter,&#xD;&#xA;&#x9;fact_invoice.is_quotation, fact_invoice.origin_id_scd,fact_invoice.result_prime,&#xA; fact_invoice.result_prime_bonus, fact_invoice.stat_on_invoice_date&#xD;&#xA;FROM fact_invoice&#xD;&#xA;LEFT JOIN dim_section ON dim_section.id_scd = fact_invoice.section_id_scd&#xD;&#xA;LEFT JOIN dim_sale ON dim_sale.id_scd = fact_invoice.sale_id_scd&#xD;&#xA;LEFT JOIN dim_invoice ON dim_invoice.id_scd = fact_invoice.invoice_id_scd&#xD;&#xA;WHERE fact_invoice.scd_active = true AND fact_invoice.scd_remove = false AND &#xD;&#xA;fact_invoice.scd_start IS NOT NULL AND (fully_invoiced = true OR (dim_section.id = ANY (ARRAY[9,&#xA;  10, 11])))&#xD;&#xA;AND (ignored_for_stat is null or ignored_for_stat=false)&#xD;&#xA;&#xD;&#xA;UNION &#xD;&#xA;&#xD;&#xA;SELECT fact_sale.id_scd, fact_sale.id, 'OERP_S_'||fact_sale.id AS ref, &#xD;&#xA;&#x9;fact_sale.type, fact_sale.sale_id_scd, fact_sale.user_create_id_scd, &#xD;&#xA;&#x9;fact_sale.section_id_scd, fact_sale.user_rep_id_scd, fact_sale.shop_id_scd, &#xD;&#xA;&#x9;fact_sale.customer_id_scd, fact_sale.date_confirm_scd, fact_sale.product_id_scd,&#xD;&#xA;&#x9;fact_sale.supplier_id_scd, fact_sale.categ_dpt_id_scd, fact_sale.categ_group_id_scd,&#xA; fact_sale.categ_family_id_scd, &#xD;&#xA;&#x9;fact_sale.categ_subfamily_id_scd, fact_sale.pr, fact_sale.pv, fact_sale.k, &#xD;&#xA;&#x9;fact_sale.product_uos_qty, fact_sale.price_unit, fact_sale.discount, &#xD;&#xA;&#x9;fact_sale.product_uos, fact_sale.margin, fact_sale.margin_with_services,fact_sale.number_of_lines,&#xA; fact_sale.purchase_price, &#xD;&#xA;&#x9;fact_sale.scd_start, fact_sale.scd_end, fact_sale.scd_active, &#xD;&#xA;&#x9;fact_sale.scd_remove, NULL::integer AS invoice_id_scd, fact_sale.zone_id_scd,&#xA;  fact_sale.address_id_scd,&#xD;&#xA;&#x9;fact_sale.fully_payed, fact_sale.fully_shipped, fact_sale.fully_invoiced,&#xA; fact_sale.is_sale_counter,&#xD;&#xA;&#x9;fact_sale.is_quotation, fact_sale.origin_id_scd,fact_sale.result_prime,&#xA; fact_sale.result_prime_bonus, fact_sale.stat_on_invoice_date&#xD;&#xA;FROM fact_sale&#xD;&#xA;LEFT JOIN dim_sale ON dim_sale.id_scd = fact_sale.sale_id_scd&#xD;&#xA;LEFT JOIN dim_section ON dim_section.id_scd = fact_sale.section_id_scd&#xD;&#xA;WHERE fully_invoiced = false AND fact_sale.scd_active = true &#xD;&#xA;AND fact_sale.state != 'draft' AND dim_sale.state != 'draft'&#xD;&#xA;AND fact_sale.scd_remove = false AND fact_sale.scd_start IS NOT NULL AND (dim_section.id &lt;> ALL &#xA; (ARRAY[9, 10, 11]))&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
@@ -167,6 +167,8 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="result_prime_bonus"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stat_on_invoice_date"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="GetAllByProduct"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -176,7 +178,7 @@
     <metadata connector="FLOW" name="tPostgresqlInput_2">
       <column comment="" defaultValue="" key="false" length="10" name="id_scd" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="id" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="ref" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2147483647" name="ref" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="type" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="sale_id_scd" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="user_create_id_scd" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
@@ -194,7 +196,7 @@
       <column comment="" defaultValue="" key="false" length="0" name="pr" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="pv" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="k" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="product_uos_qty" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="product_uos_qty" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="price_unit" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="discount" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="product_uos" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
@@ -214,9 +216,10 @@
       <column comment="" defaultValue="" key="false" length="1" name="fully_invoiced" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="1" name="is_sale_counter" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="1" name="is_quotation" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
-      <column comment="" key="false" name="origin_id_scd" nullable="true" pattern="" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="origin_id_scd" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="result_prime" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="result_prime_bonus" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="stat_on_invoice_date" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="192">
@@ -275,6 +278,7 @@
       <column comment="" key="false" name="origin_id_scd" nullable="true" pattern="" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="result_prime" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="result_prime_bonus" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="stat_on_invoice_date" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties shellMaximized="true"/>
@@ -319,6 +323,7 @@
         <mapperTableEntries name="origin_id_scd" expression="row1.origin_id_scd " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="result_prime" expression="row1.result_prime " type="id_Double" nullable="true"/>
         <mapperTableEntries name="result_prime_bonus" expression="row1.result_prime_bonus " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="stat_on_invoice_date" expression="row1.stat_on_invoice_date " type="id_Boolean" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="id_scd" type="id_Integer" nullable="true"/>
@@ -364,6 +369,7 @@
         <mapperTableEntries name="origin_id_scd" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="result_prime" type="id_Double" nullable="true"/>
         <mapperTableEntries name="result_prime_bonus" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="stat_on_invoice_date" type="id_Boolean" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -440,6 +446,7 @@
       <elementValue elementRef="NAME" value="origin_id_scd"/>
       <elementValue elementRef="NAME" value="result_prime"/>
       <elementValue elementRef="NAME" value="result_prime_bonus"/>
+      <elementValue elementRef="NAME" value="stat_on_invoice_date"/>
     </elementParameter>
     <elementParameter field="COLUMN_LIST" name="L2_STARTDATE_FIELD" value="scd_start"/>
     <elementParameter field="CLOSED_LIST" name="L2_STARTDATE_VALUE" value="JOB_START_TIME"/>
@@ -502,6 +509,7 @@
       <column comment="Column generated by scd editor." defaultValue="" key="false" name="scd_start" nullable="false" pattern="" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="section_id_scd" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="shop_id_scd" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="stat_on_invoice_date" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="supplier_id_scd" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="type" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="user_create_id_scd" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
@@ -550,6 +558,7 @@
       <column comment="" key="false" name="origin_id_scd" nullable="true" pattern="" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="result_prime" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="result_prime_bonus" nullable="true" pattern="" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="stat_on_invoice_date" nullable="true" pattern="" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -718,8 +727,11 @@
       <elementValue elementRef="TRACE_COLUMN" value="result_prime_bonus"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="stat_on_invoice_date"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="true"/>
     <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
     <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
     <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
@@ -852,6 +864,9 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="result_prime_bonus"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="stat_on_invoice_date"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
